@@ -1,0 +1,3396 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+*{
+    padding:0px;
+    margin:0px;
+ 
+}
+:root {
+    --font-primary: "Libre Franklin", sans-serif;
+    --bg-blue: #002856;
+}
+body{
+     -webkit-font-smoothing: antialiased;
+}
+/* for thesans */
+@font-face {
+    font-family: 'TheSans Light Trial', sans-serif; 
+    src: url('./fonts/thesans-3_light_trial-webfont.woff2') format('woff2'),
+         url('./fonts/thesans-3_light_trial-webfont.woff') format('woff');
+    font-weight: 300; /* 'Light' weight is typically 300 */
+    font-style: normal;
+    font-display: swap; /* Ensures text is visible immediately while loading */
+}
+/* --- Custom Fonts: Mirante --- */
+@font-face {
+    font-family: 'Mirante' , sans-serif ;
+    src: url('./fonts/Mirante-Medium.woff2') format('woff2'),
+         url('./fonts/Mirante-Medium.woff') format('woff');
+    font-weight: 500; 
+    font-style: normal;
+    font-display: swap; 
+}
+
+/* Mirante SemiBold (usually font-weight: 600) */
+@font-face {
+    font-family: 'Mirante';
+    src: url('./fonts/Mirante-SemiBold.woff2') format('woff2'),
+         url('./fonts/Mirante-SemiBold.woff') format('woff');
+    font-weight: 600; /* Maps to SemiBold weight */
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Mirante Bold (usually font-weight: 700) */
+@font-face {
+    font-family: 'Mirante';
+    src: url('./fonts/Mirante-Bold.woff2') format('woff2'),
+         url('./fonts/Mirante-Bold.woff') format('woff');
+    font-weight: 700; /* Maps to Bold weight */
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Mirante ExtraBold (usually font-weight: 800) */
+@font-face {
+    font-family: 'Mirante';
+    src: url('./fonts/Mirante-ExtraBold.woff2') format('woff2'),
+         url('./fonts/Mirante-ExtraBold.woff') format('woff');
+    font-weight: 800; /* Maps to ExtraBold weight */
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Mirante Black (usually font-weight: 900) */
+@font-face {
+    font-family: 'Mirante';
+    src: url('./fonts/Mirante-Black.woff2') format('woff2'),
+         url('./fonts/Mirante-Black.woff') format('woff');
+    font-weight: 900; /* Maps to Black weight */
+    font-style: normal;
+    font-display: swap;
+}
+/* thats end marent1 */
+/* header */
+ .head-part
+ {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #fff;
+    margin: 30px 0 0;
+    padding: 5px 0;
+     font-family: "Libre Franklin", sans-serif;
+     font-family: "Libre";
+}
+.wrapper{
+    top: 0;
+    max-width:100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.navbar{
+    background-color: #dbd1c8;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    border-radius: 8px;
+     font-family: "Libre";
+    text-transform: uppercase;
+}
+.nav-links{
+    display: flex;
+    gap: 40px;
+}
+.nav-links .for-aboutus{
+    position: relative;
+    color: #313131;
+    font-size: 14px;
+    text-decoration: none;
+    transition: color .3s ease;
+    z-index: 1;
+    font-family: var(--font-primary);
+}
+.treatment-dropdown {
+    position: relative;
+}
+.treatment-dropdown  .treatment { 
+    position: relative;
+    background: none;
+    border: none;
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+    transition: color .3s ease;
+    z-index: 1;
+    font-family: var(--font-primary);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    text-transform: uppercase;
+}
+.navbar_dropdownmenu
+{
+    position: absolute;
+    left: 0;
+    font-family: var(--font-primary);
+    width: 177px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, .1);
+    flex-direction: column;
+    gap: 10px; 
+    padding: 10px;
+    z-index: 1000;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity .3s ease, transform .3s ease;
+
+}
+.nav-links a:hover{
+    color:#002856; 
+}
+/* .............................. */
+.nav-links a:hover:after {
+    width: 100%;
+}
+.nav-links a:after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: var(--bg-blue); 
+    width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: width .5s ease;
+    z-index: 2;
+    pointer-events: none;
+}
+ .treatment-dropdown .treatment:hover:after
+{
+  width: 100%;
+}
+.treatment-dropdown .treatment:after
+{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: var(--bg-blue); 
+    width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: width .5s ease;
+    z-index: 2;
+    pointer-events: none;
+}
+/* ///////////////////////////////// */
+.treatment-dropdown:hover
+.navbar_dropdownmenu
+{
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+    display:flex;
+
+}
+.navbar_dropdownmenu a{
+    text-decoration: none;
+    color: #333;
+    position: relative;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    padding: 5px 10px;
+    border-radius: 3px;
+    transition: background-color .3s ease;
+    z-index: 1;
+}
+.navbar_dropdownmenu a:hover{
+    color: #333;
+}
+.treatment-dropdown:hover
+.navbar_dropdownmenu a:hover {
+    background-color:#dbd1c8 ;
+}
+.testimonials { 
+    position: relative;
+    color: #313131;
+    font-size: 14px;
+    text-decoration: none;
+    transition: color .3s ease;
+    z-index: 1;
+    font-family: var(--font-primary);
+}
+
+.nav-endlinks a{
+    display: flex;
+    align-items: center;
+    font-family: var(--font-primary);
+    gap: 5px;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    transition: color .3s ease;
+}
+.nav-endlinks a .getintouch-svg {
+    background: var(--bg-blue);
+    width: 18px;
+    padding: 7px;
+    height: auto;
+    color: #fff;
+    rotate: 45deg;
+    border-radius: 999px;
+    transition: all;
+    transition-duration: .2s;
+    font-family: var(--font-primary);
+}
+.nav-endlinks a:hover .getintouch-svg {
+     rotate: 0deg;
+}
+/* last burger menu */
+.menu-button{
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+    transition: color .3s ease;
+}
+/* /////////////// */
+/* section1 =========================================*/
+.section {
+    margin: 1.25rem 0 3.125rem; 
+}
+.container-wrapper{
+    top: 0; 
+    max-width: 100%;
+    margin: 0 auto;
+    height: auto;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.banner_header {
+    display: flex;
+    background-size: cover;
+    justify-content: space-between;
+    position: relative; 
+    border-radius: 10px;
+    overflow: hidden;
+    height: 563px;
+}
+.banner_section1
+{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 50px 10px 60px 100px;
+}
+.rootform
+{
+    overflow: hidden; 
+}
+.item img{
+    width:41rem;
+    height:30rem;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.banner_section1 h1 { 
+    font-size: 50px;
+    line-height: 90px;
+    letter-spacing: -1px;
+    font-weight: 10;
+    color: #fff;
+    width: 80%; 
+   font-family: 'Mirante', sans-serif; 
+   /* font-family: "Montserrat", sans-serif; */
+}
+.banner_para {
+     font-size: 19.7px;
+    padding-bottom: 30px;
+    font-family: 'TheSans Light Trial', sans-serif;
+    color: #fff;
+    line-height: 1.6rem;
+    font-weight: 100;
+    width: 60%;
+}
+/* buton of 1st section */
+#simplebutton {
+    padding-right: 20px;
+    padding-top: 10px;
+    font-size: 15px;
+    padding-bottom: 10px;
+    border-radius: 40px;
+    border-radius: 40px;
+    background: #b5a89f;
+    color: #fff;
+    font-family: 'TheSans Light Trial', sans-serif; 
+}
+.simplebutton {
+    padding: 5px 20px 5px 40px;
+    display: flex;
+    align-items: center;
+    width: -moz-fit-content;
+    width: fit-content;
+    gap: 20px;
+    justify-content: center;
+    transition: all;
+    transition-duration: .4s;
+    text-decoration: none;
+     font-family: 'TheSans Light Trial', sans-serif; 
+}
+
+
+.simplebutton .simplebutton_icon {
+    rotate: 45deg;
+    width: 20px;
+    height: auto;
+    transition: all;
+    transition-duration: .3s;
+}
+.simplebutton:hover .simplebutton_icon {
+    rotate: 0deg;
+    color:rgb(49, 49, 49);
+}
+#tosimple .simplebutton:hover  {
+    background-color:#DAD0C8 !important;
+    color: #313131 !important;
+}
+/* banner2 */
+.banner_section2{
+    width: 46%;
+    height: auto;
+    position: relative;
+    z-index: 10;
+}
+.banner_section2 img{
+    width: 490px;
+    height: auto;
+    display: flex;
+}
+/* banner3 */
+.banner_section3{
+    position: absolute;
+    right: 0;
+}
+.banner_section3
+.banner_decoration {
+    max-width: 300px;
+    max-height: 500px;
+}
+
+
+
+/* section1 end ------------------------------------ */
+
+/* section2 =========================================*/
+ .rootcanal-heading{
+    display: flex;
+    flex-direction: column;
+} 
+ .head-paty{
+     font-size: 39.6px; 
+     font-weight: 550;
+     font-weight: 510;
+    letter-spacing: -2px;
+    color: #313131;
+    font-family: "Montserrat", sans-serif;
+    
+}
+.rootcanal-text
+{
+  display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #000;
+}
+.rootcanal-text p{
+    width: 43.5%;
+    line-height: 27.2px;
+    color: #313131;
+    font-weight: 300;
+    font-family: var(--font-primary ) ;
+    font-size:1rem ;
+    color:
+rgb(49, 49, 49) ;
+}  
+ .button-part svg{
+    rotate: 45deg;
+    width: 20px;
+    height: auto;
+    transition: all;
+    transition-duration: .3s;
+}
+ 
+
+#button-rootcanal
+{   
+    border-radius: 40px;
+    background: #b5a89f;
+    color: #fff;
+     padding: 10px 20px 10px 40px;
+    display: flex;
+    align-items: center;
+    width: -moz-fit-content;
+    width: fit-content;
+    gap: 20px;
+    justify-content: center;
+    transition: all;
+    transition-duration: .4s;
+}
+ .button-part{
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 40px;
+    font-size: 1rem;
+    line-height:normal;
+    font-weight: 400; 
+    text-decoration: none;
+     font-family: "Montserrat", sans-serif;
+} 
+.button-part:hover{
+      background-color: #dad0c8 !important ;
+      color:#313131 !important ;
+     
+}
+
+.button-part:hover   svg{
+     rotate: 0deg !important ;
+
+}
+.items-box{
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.item-bluebox {
+    background: var(--bg-blue);
+    display: flex;
+    padding: 40px;
+    flex-direction: column;
+    gap: 20px;
+    width: 50%;
+    position: relative;
+    border-radius: 10px;
+}
+
+.picture-box {
+    width: 50%;
+    height: 100%;
+}
+.item-bluebox h2{
+      font-family: 'Mirante' , sans-serif ;
+      font-family: "Montserrat", sans-serif; 
+   
+}
+.sub-heading {
+    color: #f2f2f2;
+    font-weight: 300;
+    font-family: var(--font-primary ) ;
+    font-size: 1rem ;
+    line-height: 27.2px;
+    width: 80%;
+}
+.item-bluebox a {
+    padding: 10px 30px;
+    font-family: var(--font-primary ) ; 
+    background: #fff;
+    color: #313131;
+    font-weight: 500;
+    width: -moz-fit-content;
+    width: fit-content;
+    border-radius: 30px;
+    font-size: 14px;
+    transition: all;
+    transition-duration: .2s;
+    text-decoration: none;
+}
+.item-bluebox img
+{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color:transparent;
+}
+.item-bluebox a:hover{
+    background-color:#dad0c8 ;
+    color:#313131;
+}
+
+
+
+/* section2 end ------------------------------------ */
+
+/* section3 =========================================*/
+.offers-header{
+    color: #313131;
+    display: flex;
+    gap: 20px;
+    width: 100%; 
+    display: flex;
+    gap: 50px;
+    justify-content: space-between;
+    align-items: center;
+}
+.offers-container{ 
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    padding: 20px 0 0;
+}
+.offers-text1 {
+    color: #313131;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 90%;
+}
+.offers-text2{
+    display: flex; 
+    gap: 15px;
+}
+ .offers-text1 .header-star {
+    color: #313131;
+    font-size: 40px;
+    line-height: 61px;
+    letter-spacing: -2px;
+    /* font-family: 'Mirante', sans-serif; */
+    font-family: "Montserrat", sans-serif;
+    font-weight: 550;
+}
+.offers-text1 p {
+    line-height: 27.2px;
+    color: #616161;
+    font-size:1rem;
+    font-weight: 400;
+     font-family: 'TheSans Light Trial', sans-serif; 
+}
+.offerswrapper1 {
+    flex: 1 1;
+    box-sizing: border-box;
+    height: auto;
+    border-radius: 10px;
+}
+.offerswrapper2 {
+    flex: 1 1;
+    box-sizing: border-box;
+    height: auto;
+}
+.offerwrapper-text
+{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    /* justify-content: space-between; */
+    height: 100%;
+    padding: 40px;
+    color: #313131;
+    font-family: 'TheSans Light Trial', sans-serif; 
+}
+.offerwrapper-text h6 {
+    font-size: 32px;
+    font-weight: 100;
+}
+.offerwrapper-desc { 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px; 
+}
+.offerwrapper-desc  h2 {
+    font-size: 30px;
+    line-height: 2.7rem;
+    font-family: 'Mirante', sans-serif;
+    font-weight: 500;
+}
+.offerwrapper-desc p {
+    font-size:1rem;
+     font-family: 'TheSans Light Trial', sans-serif; 
+    font-weight: 300;
+    line-height: 27.2px;
+    width: 90%;
+} 
+.simplebutton_header_Link__aC2lr {
+    font-family: var(--font-para-light);
+    border-radius: 40px;
+    background: #b5a89f;
+    color: #fff;
+    padding: 5px 20px 5px 40px;
+    display: flex;
+    align-items: center;
+    width: -moz-fit-content;
+    width: fit-content;
+    gap: 20px;
+    justify-content: center;
+    transition: all;
+    transition-duration: .4s;
+} 
+.simplebutton_withImage__eNqT_ {
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 40px;
+        text-decoration: none;
+         font-family: 'TheSans Light Trial', sans-serif; 
+             font-size: 15px;
+}
+.simplebutton_withImage__eNqT_:hover {
+    background-color:#dad0c8 !important; 
+    color:#313131 !important;
+    
+}
+.simplebutton_withImage__eNqT_:hover .simplebutton_icon__LRptY {
+     rotate: 0deg;
+}
+.majnu-wrapp h6 {
+    font-size: 32px;
+    font-weight: 100;
+}
+.offerswrapper2 {
+    position: relative;
+    border-radius: 10px;
+    height: 100%;
+}
+.simplebutton_icon__LRptY {
+    rotate: 45deg;
+    width: 19px;
+    height: auto;
+    transition: all;
+    transition-duration: .3s;
+}
+.majnu-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    justify-content: space-between;
+    height: 100%;
+    padding: 40px;
+    color: #313131;
+    font-family: var(--font-card-light);
+}
+.offerswrapper2 img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 10px;
+    width: 50%;
+    height: auto;
+}
+ .offerswrapper2 .majnu-wrapp {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    gap: 80px;
+    justify-content: space-between;
+    height: 100%;
+    padding: 40px;
+    color: #313131;
+    font-family: var(--font-card-light);
+}
+.wrapper-majnu h2 {
+font-size: 30px;
+    line-height: 2.7rem;
+    font-family: 'Mirante', sans-serif;
+    font-weight: 500;
+}
+.wrapper-majnu p {
+    font-size: 1rem;
+    font-family: 'TheSans Light Trial', sans-serif;
+    font-weight: 300;
+    line-height: 27.2px;
+    width: 90%;
+}
+.wrapper-majnu{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+}
+.simplebutton_header_Link__aC2lr-1 {
+    font-family: var(--font-para-light);
+    border-radius: 40px;
+    background: #b5a89f;
+    color: #fff;
+    padding: 5px 20px 5px 40px;
+    display: flex;
+    align-items: center;
+    width: -moz-fit-content;
+    width: fit-content;
+    gap: 20px;
+    justify-content: center;
+    transition: all;
+    transition-duration: .4s;
+}
+.simplebutton_withImage__eNqT_1 {
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 40px;
+    text-decoration: none;
+    font-family: 'TheSans Light Trial', sans-serif;
+    font-size: 15px;
+} 
+.simplebutton_withImage__eNqT_1:hover{
+   background-color: #dad0c8 !important; 
+   color:#313131 !important;
+}
+.simplebutton_withImage__eNqT_1:hover .simplebutton_icon__LRptY-1 {
+     rotate: 0deg;
+}
+.simplebutton_icon__LRptY-1 {
+    rotate: 45deg;
+    width: 19px;
+    height: auto;
+    transition: all;
+    transition-duration: .3s;
+}
+.offers-container { 
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    padding: 20px 0 0;
+}
+.offerswrapper3 {
+    width: 100%;
+    height: auto;
+        flex: 1 1;
+    box-sizing: border-box;
+    height: auto;
+    border-radius: 10px;
+
+}
+.offer-image {
+    position: relative;
+    width: 75%;
+    font-family: var(--font-secondary);
+}
+.offer-image img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    position: relative;
+}
+.offer-third {
+    width: 25%;
+    height: auto;
+}
+
+
+/*  */
+/* 
+section3 end ------------------------------------ */
+/* section4 =========================================*/
+.news-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    justify-content: space-between;
+} 
+.news-section{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.simplebutton_header_Link__aC2lr3 {
+    border-radius: 40px;
+    background: #b5a89f;
+    color: #fff;
+    padding: 5px 20px 5px 40px;
+    display: flex;
+    align-items: center;
+    width: -moz-fit-content;
+    width: fit-content;
+    gap: 20px;
+    justify-content: center;
+    transition: all;
+    transition-duration: .4s;
+    text-decoration:none ;
+     font-family: "Montserrat", sans-serif;
+}
+.simplebutton_withImage__eNqT_3 {
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 40px;
+}
+.simplebutton_withImage__eNqT_3:hover {
+      background-color: #dad0c8 !important ;
+      color:#313131 !important ;
+}
+.simplebutton_withImage__eNqT_3:hover .simplebutton_icon__LRptY3
+{
+      rotate: 0deg !important; 
+}
+.simplebutton_icon__LRptY3 {
+    rotate: 45deg;
+    width: 20px;
+    height: auto;
+    transition: all;
+    transition-duration: .3s;
+}
+.news-top img{
+    object-fit: cover;
+    border-radius: 10px;
+    width: 50%;
+}
+.newsover{
+    background: #dbd1c8;
+    border-radius: 10px;
+    width: 50%;
+}
+.newsover-text
+{    padding: 40px 50px;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.newstext-section
+{
+        font-size: 16px;
+    line-height: 27.2px;
+    font-weight: 300;
+    color: #313131;
+        width: 127%;
+}
+.news-top {
+    display: flex;
+    gap: 10px;
+     overflow: hidden;
+}
+.newsover{
+    background: #dbd1c8;
+    border-radius: 10px;
+    width: 50%;
+}
+.sub-heading
+{
+    font-family: var(--font-primary);
+}
+.newsover-text {
+    padding: 40px 50px;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.news-bottom
+{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+.newsover-left {
+    display: flex;
+    width: 50%;
+    gap: 10px;
+}
+ .newsover-left
+ {
+    display: flex;
+    width: 50%;
+    gap: 10px;
+}
+.newsover-card {
+    background: #eff1f5;
+    font-family: var(--font-primary);
+    position: relative;
+    border-radius: 8px;
+}
+.newscard-text {
+    padding: 20px;
+    display: flex; 
+    flex-direction: column;
+    gap: 30px;
+}
+.news-card_link__OXBln {
+    color: #313131;
+    font-size: var(--font-sub-heading);
+    font-family: var(--font-secondary);
+    font-weight: 500;
+}
+.newscard-text p {
+    font-size: 28px;
+    color: #313131;
+    font-family: var(--font-secondary);
+    font-weight: 500;
+    line-height: 41.6px;
+}
+.newsover-left .news-over_bottom_image__TqE_G {
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.newsover-right {
+    display: flex; 
+    width: 50%;
+    gap: 10px;
+}
+ .newsover-right  .news-over_bottom_image__TqE_G {
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+ .new-bottomimage .news-card_rightBottomImage___M7Ek {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 55%;
+    height: 75%;
+    border-bottom-right-radius: 8px;
+}
+ .news-over_bottom_image__TqE_G {
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.new-bottomimage {
+    position: absolute;
+    bottom: 0;
+    left: 12px;
+    width: 98%;
+    height: 75%;
+}
+.news-card_rightBottomImage___M7Ek {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 55%;
+    height: 75%;
+    border-bottom-right-radius: 8px;
+}
+.transform_back__ieOmt {
+    background-image: url(/images/transform-smiles.webp);
+    border-radius: 10px;
+    height: 600px;
+    width: 100%;
+    display: flex
+;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
+}
+
+/* section4 end ------------------------------------ */
+/* section5 =========================================*/
+/* section5 end ------------------------------------ */
+/* section6 =========================================*/
+.transform_back {
+    background-image: url(/assets/images/transform-smiles.webp);
+    border-radius: 10px;
+    height: 600px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
+}
+/* section6 end ------------------------------------ */
+/* section7 =========================================*/
+.testimonials-header {
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+    color: var(--secon-color);
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+.testimonials_buttonGroup__ZkzYx {
+    display: flex;
+    justify-content: center;
+    margin-right: 1rem;
+    gap: 1.25rem;
+}
+.testimonials_sliderButton__Junc_ {
+    background-color: var(--bg-blue);
+    border: 1px solid #fff;
+    width: 3rem;
+    height: 3rem;
+    color: #fff;
+    border-radius: 50%;
+    transition: all;
+    transition-duration: .2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.testimonials_btn_arrow__kPbVo {
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    width: 15px;
+    height: 15px;
+    flex-shrink: 0;
+}
+.testimonial-header 
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--primary-color);
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+.testimonial-button {
+    display: flex;
+    justify-content: center;
+    margin-right: 1rem;
+    gap: 1.25rem;
+}
+/* for slider */
+.slick-container
+{
+    display:flex;
+    gap:1.5rem; 
+}
+.slick-slide {
+    background-color: #EFF1F5;
+    color: rgb(59, 63, 92);
+    border-radius: 10px;
+    padding: 3rem;
+    height:100%;
+    position:relative;
+}
+
+
+/*  */
+.slick-slide img {
+    display: block;
+}
+.slick-slide .testimonials_image__ {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 10px;
+    color: transparent;
+}
+/* /////////// */
+.testimonial-cardcontent .testimonials_cardName__jYzDF
+{
+    color: #3b3f5c;
+    font-family: var(--font-primary);
+    margin-bottom: 13px;
+    font-size: 24px;
+    font-weight: 700;
+} 
+.testimonial-carddescription{
+    margin-top: 1.25rem;
+    font-size: 20px;
+    line-height: 32px;
+    font-weight: 400;
+     font-family: 'TheSans Light Trial', sans-serif; 
+}
+
+/* section7 end ------------------------------------ */
+/* section8 =========================================*/
+.book-onlineback
+{
+    background-image: url(/assets/images/book-online.webp);
+    height: 500px;
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat; 
+}
+.onlinebook-container {
+    display: flex;
+    justify-self: center;
+    background: var(--bg-blue);
+    width: 97%;
+    border-radius: 10px;
+    position: relative;
+    margin-top: -100px;
+}
+.bookonline-form { 
+    width: 100%;
+    padding: 50px;
+    gap: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.book-onlineheader
+{
+    font-size: 100px;
+    font-family: 'Mirante', sans-serif; 
+    /* font-family: "Montserrat", sans-serif;  */
+    font-weight: 510;
+    color: grey; 
+    letter-spacing: -6px;
+}
+.offers-text1 h2{
+        line-height: 3.9rem;
+}
+.book-onlinebackground
+{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 20%;
+    height: 18%;
+    background-image: url(/assets/images/bookonline.png);
+    background-repeat: no-repeat;
+}
+.form {
+    align-self: center;
+    width: 60%;
+}
+.formcontainer{ 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    grid-gap: 10px;
+    gap: 10px;
+    border-radius: 12px;
+}
+.onlineinput {  
+    width: 100%;
+}
+.book-online_input__wrD3z {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 1px solid grey;
+    border-radius: 9999px;
+    background-color: transparent;
+    font-size: var(--font-sub-heading);
+    transition: .3s;
+    max-height: 54px;
+    overflow: hidden;
+    resize: none;
+    font-family: var(--font-card);
+    color: #f9f9f9;
+}
+.book-online-select {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 1px solid grey;
+    border-radius: 9999px;
+    background-color: transparent;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    transition: .3s;
+    font-size: 1rem;
+    color: grey;
+}
+.book-online-select option { 
+    background-color: #fff;
+    color: #000;
+    font-family: var(--font-primary);
+    font-size: 1rem;
+    padding: 10px;
+    color: grey;
+}
+.book-online_submitButton{
+    padding: 15px 24px;
+    background-color:#dad0c8;
+    font-family: var(--font-primary);
+    color: #313131;
+    font-size: 14px;
+    border-radius: 9999px;
+    transition: .3s;
+    cursor: pointer;
+    text-align: center;
+    margin-bottom: 15px;
+    border: none;
+    width:98%;
+    outline: none;
+}
+.book-online_submitButton:hover{
+    background-color: #b9b6b6;
+}
+.checkboxcontainer { 
+    display: flex;
+    align-items: center;
+    color: grey;
+    font-family: 'TheSans Light Trial', sans-serif;
+}
+.book-online_checkbox__7_VTq {
+    width: 16px;
+    height: 16px;
+    margin: 0 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    accent-color: #fff;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: inline-block;
+    cursor: pointer;
+    flex-shrink: 0;
+    outline: none;
+}
+.book-online_link__USgNP {
+    text-decoration: underline;
+}
+.book-online_submitButton__PHKaf {
+    padding: 15px 24px;
+    background-color:#dad0c8;
+    font-family: var(--font-primary);
+    color: #313131;
+    font-size: 14px;
+    border-radius: 9999px;
+    transition: .3s;
+    cursor: pointer;
+    text-align: center;
+    margin-bottom: 15px;
+    border: none;
+}
+.book-online_input__wrD3z {
+    width: 87%;
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 1px solid grey;
+    border-radius: 9999px;
+    background-color: transparent;
+    font-size:1rem;
+    transition: .3s;
+    max-height: 17px;
+    overflow: hidden;
+    resize: none;
+    font-family: 'TheSans Light Trial', sans-serif;
+    color: #f9f9f9;
+}
+.book-online_link__USgNP {
+    text-decoration: underline;
+     color: #f9f9f9;
+     color: grey;
+      font-family: 'TheSans Light Trial', sans-serif;
+}
+.book-online-select {
+    width: 99%;
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 1px solid grey;
+    border-radius: 9999px;
+    background-color: transparent;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    transition: .3s;
+     font-family: 'TheSans Light Trial', sans-serif;
+    font-size: 16px;
+    color: grey;
+    
+}
+
+.item-bluebox h2 {
+    color: rgb(255, 255, 255);
+     font-size: 32px;
+     font-weight: 500; 
+     line-height: 41px;
+}
+.banner_section1 h1 {
+    font-size: 50px;
+    line-height: 70px;
+    letter-spacing: -1px;
+    font-weight: 10;
+    color: #fff;
+    width: 80%;
+    font-family: 'Mirante', sans-serif;
+    /* font-family: "Montserrat", sans-serif; */
+}
+/* section8 end ------------------------------------ */
+/* footer */
+.footer_footer {
+    background: #b5a89f;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.footer-container {
+    display: flex;
+    padding: 40px;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer-left-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.footer-right-section {
+    line-height: 25px;
+}
+.footer-pairs {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.footer-pairs p {
+    font-family: var(--font-primary);
+    font-weight: 300;
+    color: #fff;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+.footer-right-text{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 14px;
+}
+
+ .footer-right-text p {
+    font-family: var(--font-primary);
+    font-weight: 300;
+    color: #fff;
+}
+.footer {
+    width: 100%;
+    height: auto;
+    margin-bottom: -5px;
+}
+
+
+
+
+
+
+
+
+
+
+/* ......... */
+/*  font-family: 'Mirante', sans-serif; 
+/* font-family: "Montserrat", sans-serif; */ 
+/*  font-family: 'TheSans Light Trial', sans-serif; */
+/* Styling for the error messages (keep these) */
+
+
+
+
+.error-message {
+  
+    margin-left: 15px;
+    margin-top: 0px;
+    display: block;
+    color: #e45050;
+    font-size: 14px;
+    font-family: 'TheSans Light Trial', sans-serif;
+}
+.rightimage img {
+    position: absolute;
+    bottom: 0;
+    right: 6px;
+    width: 55%;
+    height: 75%;
+    border-bottom-right-radius: 8px;
+} 
+.leftimage img{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 98%;
+    height: 75%;
+}
+/* ////////////////////////////////// show nav */
+.navbar_menuToggleButton{
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+}
+.menu-button {
+    display:none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+    transition: color .3s ease;
+}
+.navbar-show a
+{
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    font-family: var(--font-primary);
+}
+.navbar_get_in_touch_btn___zGGK {
+    background: var(--bg-blue);
+    width: 20px;
+    padding: 7px;
+    height: auto;
+    color: #fff;
+    rotate: 45deg;
+    border-radius: 999px;
+    transition: all;
+    transition-duration: .2s;
+}
+
+
+.navbar_mobileOnly__MBEWL {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    gap: 10px;
+}
+.navbar_mobileMenu__wHMTE a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    font-family: var(--font-secondary);
+}
+.navbar_dropdownToggle {
+    position: relative;
+    background: none;
+    border: none;
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+    transition: color .3s ease;
+    z-index: 1;
+    font-family: var(--font-secondary);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    text-transform: uppercase;
+}
+
+
+.navbar-show {
+    position: fixed;
+    top: 0;
+     opacity: 0;
+    visibility: hidden;
+    right: -100%;
+    width: 80%;
+    height: 100%;
+    background-color: #dbd1c8;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 33px;
+    z-index: 2000;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, .1);
+    transition: right .3s ease;
+}
+.navbar_closeButton {
+    background: none;
+    border: none;
+    font-size: 24px;
+    align-self: flex-start;
+    cursor: pointer;
+    color: #333;
+    transition: color .3s ease;
+}
+/* checkbox */
+.checkboxcontainer
+{
+    display:flex;
+    flex-direction: column;
+    gap:8px;
+}
+.partlyconvert
+{
+    display: flex;
+    gap:2px;
+}
+.error6 {
+    margin-left: -15px;
+    margin-top: 0px;
+    display: block;
+    color: #e45050;
+    font-size: 14px;
+    font-family: 'TheSans Light Trial', sans-serif;
+}
+/* ////////////////////////////////////////////////////////////////////////////////RESPONSIVENESS */
+@media(max-width:1244px)
+{
+    .head-paty {
+    font-size: 36px;
+    font-weight: 510;
+    letter-spacing: -2px;
+    color: #313131;
+    font-family: "Montserrat", sans-serif;
+    }
+    .offers-text1 h2 {
+    line-height: 3.4rem;
+    } 
+    .newsover-left .news-over_bottom_image__TqE_G {
+    height: auto;
+    width: 40%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.newsover-right .news-over_bottom_image__TqE_G {
+    height: auto;
+    width: 40%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.leftimage img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 92%;
+    height: 67%;
+}
+.rightimage img {
+    position: absolute;
+    bottom: 0;
+    right: 6px;
+    width: 38%;
+    height: 67%;
+    border-bottom-right-radius: 8px;
+}
+.newscard-text p {
+    font-size: 27px;
+    color: #313131;
+    font-family: var(--font-secondary);
+    font-weight: 500;
+    line-height: 41.4px;
+}
+.banner_section3 .banner_decoration {
+    max-width: 237px;
+    max-height: 487px;
+}
+
+}
+@media(max-width:1197px)
+{
+.item img {
+    width: 41rem;
+    height: 35rem;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.news-top img {
+    object-fit: cover;
+    border-radius: 10px;
+    width: 50%;
+    height: 100%;
+}
+
+.book-onlineheader {
+    font-size: 97px;
+    font-family: 'Mirante', sans-serif;
+    /* font-family: "Montserrat", sans-serif; */
+    font-weight: 510;
+    color: grey;
+    letter-spacing: -6px;
+}
+.banner_section1 {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 50px 10px 60px 70px;
+}
+    .banner_section3 .banner_decoration {
+        max-width: 189px;
+        max-height: 486px;
+    }
+    .banner_section1 {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0px;
+    padding: 50px 10px 60px 70px;
+}
+}
+@media(max-width:1100px)
+{
+
+    .offers-text1 h2 {
+        line-height: 3.1rem;
+    }
+
+.head-paty {
+        font-size: 32px;
+        font-weight: 510;
+        letter-spacing: -2px;
+        color: #313131;
+        font-family: "Montserrat", sans-serif;
+ }
+.simplebutton_withImage__eNqT_ {
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 40px;
+    text-decoration: none;
+    font-family: 'TheSans Light Trial', sans-serif;
+    font-size: 14px;
+}
+.news-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 1.3rem;
+}
+.news-top {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow: hidden;
+}
+.news-top img {
+    object-fit: cover;
+    border-radius: 10px;
+    width: 100%;
+    height: 50%;
+}
+.newsover {
+    background: #dbd1c8;
+    border-radius: 10px;
+    width: auto;
+    height: auto;
+}
+.news-top img {
+        object-fit: cover;
+        border-radius: 10px;
+        width: 100%;
+        height: auto;
+    }
+.newsover-left {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 10px;
+}
+.newsover-left .news-over_bottom_image__TqE_G {
+        height: 50%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+        .leftimage img {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 58%;
+        height: 62%;
+    }
+    .newsover-right {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 10px;
+}
+    .newsover-right .news-over_bottom_image__TqE_G {
+        height: auto;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+        .rightimage img {
+        position: absolute;
+        bottom: 0;
+        right: 6px;
+        width: 32%;
+        height: 76%;
+        border-bottom-right-radius: 8px;
+    }
+    .checkboxcontainer {
+    display: flex;
+    align-items: center;
+    color: grey;
+    font-size: .9rem;
+    font-family: 'TheSans Light Trial', sans-serif;
+}
+.book-online_input__wrD3z {
+    width: 87%;
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 1px solid grey;
+    border-radius: 9999px;
+    background-color: transparent;
+    font-size: .9rem;
+    transition: .3s;
+    max-height: 17px;
+    overflow: hidden;
+    resize: none;
+    font-family: 'TheSans Light Trial', sans-serif;
+    color: #f9f9f9;
+}
+.book-online_submitButton {
+    padding: 15px 24px;
+    background-color: #dad0c8;
+    font-family: var(--font-primary);
+    color: #313131;
+    font-size: .7rem;
+}
+        .leftimage img {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 39%;
+        height: 62%;
+    }
+    .formcontainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    grid-gap: 10px;
+    gap: 13px;
+    border-radius: 12px;
+}
+.error-message {
+    margin-left: 16px;
+    margin-top: 0px;
+    display: block;
+    color: #e45050;
+    font-size: 10px;
+    font-family: 'TheSans Light Trial', sans-serif;
+}
+.book-onlinebackground {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 19%;
+    height: 15%;
+    background-image: url(/assets/images/bookonline.png);
+    background-repeat: no-repeat;
+}
+.banner_header {
+    display: flex;
+    background-size: cover;
+    justify-content: space-between;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 532px;
+}
+    .banner_section3 .banner_decoration {
+        max-width: 142px;
+        max-height: 486px;
+    } 
+    .banner_section1 h1 {
+    font-size: 47px;
+    line-height: 80px;
+    letter-spacing: -1px;
+    font-weight: 10;
+    color: #fff;
+    width: 80%;
+    font-family: 'Mirante', sans-serif;
+    /* font-family: "Montserrat", sans-serif; */
+}
+.banner_para {
+    font-size: 19px;
+    padding-bottom: 30px;
+    font-family: 'TheSans Light Trial', sans-serif;
+    color: #fff;
+    line-height: 1.6rem;
+    font-weight: 100;
+    width: 60%;
+}
+#simplebutton {
+    padding-right: 20px;
+    padding-top: 10px;
+    font-size: 13px;
+    padding-bottom: 10px;
+    border-radius: 40px;
+    border-radius: 40px;
+    background: #b5a89f;
+    color: #fff;
+    font-family: 'TheSans Light Trial', sans-serif;
+}
+.nav-links .for-aboutus {
+    position: relative;
+    color: #313131;
+    font-size: 13px;
+    text-decoration: none;
+    transition: color .3s ease;
+    z-index: 1;
+    font-family: var(--font-primary);
+}
+.nav-endlinks a {
+    display: flex
+;
+    align-items: center;
+    font-family: var(--font-primary);
+    gap: 5px;
+    text-decoration: none;
+    color: #333;
+    font-size: 13px;
+    transition: color .3s ease;
+}
+.slick-slide {
+    background-color: #EFF1F5;
+    color: rgb(59, 63, 92);
+    border-radius: 10px;
+    padding: 2rem;
+    height: 100%;
+    position: relative;
+}
+}
+@media(max-width:1027px)
+{
+    .offer-image img {
+    object-fit: cover;
+    width: 100%;
+    height: 55%;
+    border-radius: 10px;
+    position: relative;
+
+}
+.navbar-show {
+    right: 0;
+}
+.banner_header {
+    display: flex;
+    background-size: cover;
+    justify-content: space-between;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 456px;
+}
+.banner_section3 .banner_decoration {
+    max-width: 175px;
+    max-height: 435px;
+}
+.banner_section1 {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 50px 10px 60px 57px;
+}
+.banner_section1 h1 {
+    font-size: 45px;
+    line-height: 70px;
+    letter-spacing: -1px;
+    font-weight: 10;
+    color: #fff;
+    width: 80%;
+    font-family: 'Mirante', sans-serif;
+    /* font-family: "Montserrat", sans-serif; */
+}
+.banner_para {
+    font-size: 17px;
+    padding-bottom: 29px;
+    font-family: 'TheSans Light Trial', sans-serif;
+    color: #fff;
+    line-height: 1.6rem;
+    font-weight: 100;
+    width: 60%;
+}
+#simplebutton {
+    padding-right: 20px;
+    padding-top: 10px;
+    font-size: 13px;
+    padding-bottom: 10px;
+    border-radius: 40px;
+    border-radius: 40px;
+    background: #b5a89f;
+    color: #fff;
+    font-family: 'TheSans Light Trial', sans-serif;
+}
+.nav-links .for-aboutus {
+    position: relative;
+    color: #313131;
+    font-size: 13px;
+    text-decoration: none;
+    transition: color .3s ease;
+    z-index: 1;
+    font-family: var(--font-primary);
+}
+.treatment-dropdown .treatment {
+    position: relative;
+    background: none;
+    border: none;
+    font-size: 13px;
+    color: #333;
+    cursor: pointer;
+    transition: color .3s ease;
+    z-index: 1;
+    font-family: var(--font-primary);
+    display: flex
+;
+    align-items: center;
+    gap: 5px;
+    text-transform: uppercase;
+}
+.testimonials {
+    position: relative;
+    color: #313131;
+    font-size: 13px;
+    text-decoration: none;
+    transition: color .3s ease;
+    z-index: 1;
+    font-family: var(--font-primary);
+}
+.nav-endlinks a {
+    display: flex
+;
+    align-items: center;
+    font-family: var(--font-primary);
+    gap: 5px;
+    text-decoration: none;
+    color: #333;
+    font-size: 13px;
+    transition: color .3s ease;
+}
+.rootcanal-text {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    color: #000;
+    width:100%;
+}
+.rootcanal-text p {
+    width: 100%;
+    text-align: center;
+    line-height: 27.2px;
+    color: #313131;
+    font-weight: 300;
+    font-family: var(--font-primary);
+    font-size: 1rem;
+    color: rgb(49, 49, 49);
+}
+.rootcanal-heading {
+    display: flex;
+    flex-direction: column;
+}
+    .head-paty {
+        font-size: 30px;
+        font-weight: 510;
+        text-align: center;
+        letter-spacing: -2px;
+        color: #313131;
+        font-family: "Montserrat", sans-serif;
+    }
+    .rootcanal-text {
+    display: flex
+;
+    width: 100%;
+    gap: 1rem;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    color: #000;
+}
+#button-rootcanal {
+    border-radius: 40px;
+    background: #b5a89f;
+    color: #fff;
+    padding: 10px 20px 10px 36px;
+    display: flex
+;
+    align-items: center;
+    width: -moz-fit-content;
+    width: fit-content;
+    gap: 14px;
+    font-size: .9rem;
+    justify-content: center;
+    transition: all;
+    transition-duration: .4s;
+}
+.rootcanal-heading {
+    display: flex
+;
+    gap: .8rem;
+    flex-direction: column;
+}
+.items-box {
+    display: flex
+;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+    .item-bluebox {
+        background: var(--bg-blue);
+        display: flex;
+        padding: 40px;
+        flex-direction: column;
+        gap: 20px;
+        width: 92%;
+        position: relative;
+        border-radius: 10px;
+    }
+    .forimagespart
+    {
+        width:100%;
+    }
+     .forimagespart img
+    {
+        width:100%;
+        height:auto;
+    }
+    .picture-box {
+    width: 100%;
+    height: auto;
+}
+
+element.style {
+}
+.offers-header {
+    color: #313131;
+    gap: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: space-between;
+
+}
+.offers-text1 p {
+    line-height: 27.2px;
+    color: #616161;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: 'TheSans Light Trial', sans-serif;
+}
+.item-bluebox h2 {
+    color: rgb(255, 255, 255);
+    font-size: 29px;
+    font-weight: 500;
+    line-height: 40px;
+}
+.sub-heading {
+    color: #f2f2f2;
+    font-weight: 300;
+    font-family: var(--font-primary);
+    font-size: .9rem;
+    line-height: 27px;
+    width: 80%;
+}
+
+.item-bluebox a {
+    padding: 10px 30px;
+    font-family: var(--font-primary);
+    background: #fff;
+    color: #313131;
+    font-weight: 500;
+    width: -moz-fit-content;
+    width: fit-content;
+    border-radius: 30px;
+    font-size: 12px;
+    transition: all;
+    transition-duration: .2s;
+    text-decoration: none;
+}
+.offers-header {
+    color: #313131;
+    gap: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: space-between;
+    align-items: center;
+}
+    .offers-text1 h2 {
+        line-height: 2.8rem;
+    }
+    .offers-text1 p {
+    line-height: 27.2px;
+    text-align: center;
+    color: #616161;
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: 'TheSans Light Trial', sans-serif;
+}
+.offers-text2 {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.offers-container {
+    display: flex
+;
+    gap: 20px;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 0 0;
+}
+.offer-third {
+    width: 100%;
+    height: auto;
+}
+.offer-image {
+    position: relative;
+    width: 100%;
+    font-family: var(--font-secondary);
+}
+    .offer-image img {
+        object-fit: cover;
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        position: relative;
+    }
+    .testimonial-header {
+    display: flex;
+    align-items: center;
+    gap: .9rem;
+    justify-content: space-between;
+    flex-direction: column;
+    color: var(--primary-color);
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+.book-onlineback {
+    background-image: url(/assets/images/book-online.webp);
+    height: 300px;
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
+}
+    .book-online_header__gr8a6 {
+        width: 100%;
+        text-align: center;
+        font-size: 44px;
+    }
+.bookonline-form {
+    width: 100%;
+    padding: 50px;
+    gap: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+    .formcontainer {
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        grid-gap: 10px;
+        gap: 13px;
+        border-radius: 12px;
+    }
+    .form {
+    align-self: center;
+    width: 100%;
+}
+.onlineinput {
+    width: 83%;
+}
+.book-online-select {
+    width: 124%;
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 1px solid grey;
+    border-radius: 9999px;
+    background-color: transparent;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    transition: .3s;
+    font-family: 'TheSans Light Trial', sans-serif;
+    font-size: 16px;
+    color: grey;
+}
+
+.book-online_submitButton {
+    padding: 15px 24px;
+    background-color: #dad0c8;
+    font-family: var(--font-primary);
+    color: #313131;
+    font-size: 14px;
+    border-radius: 9999px;
+    transition: .3s;
+    cursor: pointer;
+    text-align: center;
+    margin-bottom: 15px;
+    border: none;
+    width: 100%;
+        padding: 15px 24px; 
+        background-color: #dad0c8;
+        font-family: var(--font-primary);
+        color: #313131;
+        font-size: .7rem;
+}
+    .book-onlinebackground {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 19%;
+        height: 8%;
+        background-image: url(/assets/images/bookonline.png);
+        background-repeat: no-repeat;
+    }
+    .bookonline-form {
+    width: 100%;
+    padding: 30px;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.onlineinput {
+    width: 80.4%;
+}
+    .book-onlineheader {
+        font-size: 44px;
+        font-family: 'Mirante', sans-serif;
+        /* font-family: "Montserrat", sans-serif; */
+        font-weight: 510;
+        color: grey;
+        letter-spacing: -1px;
+        text-align: center;
+    }
+        .book-online_input__wrD3z {
+        width: 119%;
+        padding: 15px;
+        margin-bottom: 10px;
+        border: 1px solid grey;
+        border-radius: 9999px;
+        background-color: transparent;
+        font-size: .9rem;
+        transition: .3s;
+        max-height: 17px;
+        overflow: hidden;
+        resize: none;
+        font-family: 'TheSans Light Trial', sans-serif;
+        color: #f9f9f9;
+    }
+  .formcontainer {
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        grid-gap: 10px;
+        gap: 13px;
+        margin-bottom: 3rem;
+        border-radius: 12px;
+    }
+        .book-online_submitButton {
+        transition: .3s;
+        cursor: pointer;
+        text-align: center;
+        margin-bottom: 15px;
+        border: none;
+        width: 100%;
+        padding: 15px 24px;
+        background-color: #dad0c8;
+        font-family: var(--font-primary);
+        color: #313131;
+        font-size: .8rem;
+    }
+    .footer-container {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    justify-content: center;
+    align-items: center;
+}
+.footer-right-text {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 14px;
+}
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+}
+    .book-onlinebackground {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 25%;
+        height: 8%;
+        background-image: url(/assets/images/bookonline.png);
+        background-repeat: no-repeat;
+    }
+    .head-paty {
+        font-size: 33px;
+        font-weight: 510;
+        text-align: center;
+        letter-spacing: -1px;
+        color: #313131;
+        font-family: "Montserrat", sans-serif;
+    }
+   
+}
+@media(max-width:950px)
+{
+        .banner_header {
+        display: flex;
+        background-size: cover;
+        justify-content: space-between;
+        position: relative;
+        border-radius: 10px;
+        overflow: hidden;
+        height: 442px;
+    }
+}
+@media(max-width:912px)
+{
+        .banner_header {
+        display: flex;
+        background-size: cover;
+        justify-content: space-between;
+        position: relative;
+        border-radius: 10px;
+        overflow: hidden;
+        height: 416px;
+    } 
+        .banner_section1 h1 {
+        font-size: 40px;
+        line-height: 61px;
+        letter-spacing: -1px;
+        font-weight: 10;
+        color: #fff;
+        width: 80%;
+        font-family: 'Mirante', sans-serif;
+        }
+            .banner_para {
+        font-size: 15px;
+        padding-bottom: 29px;
+        font-family: 'TheSans Light Trial', sans-serif;
+        color: #fff;
+        line-height: 1.6rem;
+        font-weight: 100;
+        width: 60%;
+    }
+        #simplebutton {
+        padding-right: 20px;
+        padding-top: 10px;
+        font-size: 11px;
+        padding-bottom: 10px;
+        border-radius: 40px;
+        border-radius: 40px;
+        background: #b5a89f;
+        color: #fff;
+        font-family: 'TheSans Light Trial', sans-serif;
+    }
+
+    .item-bluebox h2 {
+    color: rgb(255, 255, 255);
+    font-size: 29px;
+    font-weight: 500;
+    line-height: 41px;
+    }
+        .leftimage img {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 46%;
+        height: 41%;
+    }
+        .our-offers_header_text__l_qc7 h2 {
+        font-size: 40px;
+        line-height: 55px;
+    }
+        .banner_section1 {
+        width: 100%;
+        display: flex;
+        /* flex-direction: column; */
+        justify-content: center;
+        gap: 20px;
+        padding: 50px 10px 60px 57px;
+    }
+.banner_section1 {
+        width: 100%;
+        display: flex;
+        /* flex-direction: column; */
+        justify-content: center;
+        gap: 20px;
+        padding: 40px 5px 35px 27px;
+    }
+    .banner_header {
+        display: flex;
+        background-size: cover;
+        justify-content: space-between;
+        position: relative;
+        border-radius: 10px;
+        overflow: hidden;
+        height: 375px;
+    }
+        .banner_section3 .banner_decoration {
+        max-width: 216px;
+        max-height: 435px;
+    }
+        .banner_para {
+        font-size: 15px;
+        padding-bottom: 29px;
+        font-family: 'TheSans Light Trial', sans-serif;
+        color: #fff;
+        line-height: 1.6rem;
+        font-weight: 100;
+        width: 100%;
+    }
+        .banner_para {
+        font-size: 19px;
+        position: relative;
+        z-index: 4;
+        padding-bottom: 29px;
+        font-family: 'TheSans Light Trial', sans-serif;
+        color: #fff;
+        line-height: 1.6rem;
+        font-weight: 100;
+        width: 100%;
+    }
+        .banner_section1 h1 {
+        font-size: 45px;
+        line-height: 61px;
+        letter-spacing: -1px;
+        font-weight: 10;
+        color: #fff;
+        width: 80%;
+        font-family: 'Mirante', sans-serif;
+    }
+    
+}
+@media(max-width:853px)
+{
+    .rightimage img {
+        position: absolute;
+        bottom: 0;
+        right: 6px;
+        width: 30%;
+        height: 53%;
+        border-bottom-right-radius: 8px;
+    }
+    .newsover-card {
+    background: #eff1f5;
+    font-family: var(--font-primary);
+    position: relative;
+    border-radius: 8px;
+    height: 16rem;
+}
+    .banner_para {
+        font-size: 15px;
+        position: relative;
+        z-index: 4;
+        padding-bottom: 29px;
+        font-family: 'TheSans Light Trial', sans-serif;
+        color: #fff;
+        line-height: 1.6rem;
+        font-weight: 100;
+        width: 100%;
+    }
+    .banner_section1 {
+        width: 100%;
+        z-index: 2;
+        display: flex;
+        /* flex-direction: column; */
+        justify-content: center;
+        gap: 20px;
+        padding: 40px 5px 35px 27px;
+    }
+        .banner_para {
+        font-size: 17px;
+        position: relative;
+        z-index: 4;
+        padding-bottom: 29px;
+        font-family: 'TheSans Light Trial', sans-serif;
+        color: #fff;
+        line-height: 2rem;
+        font-weight: 100;
+        width: 100%;
+    }
+}
+@media(max-width:820px)
+{
+    .item-bluebox h2 {        
+    color: rgb(255, 255, 255);
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 44px;
+}
+}
+@media(max-width:768px)
+{
+
+.menu-button {
+    display:block;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+    transition: color .3s ease;
+}
+.nav-links {
+    display: none;
+    gap: 40px;
+}
+.nav-endlinks {
+    display: none;
+    gap: 40px;
+}
+    .navbar-mobile-logo {
+        position: absolute;
+        top: 579px;
+    }
+        .navbar-mobile-logo img{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    /* navbar - show */
+ .active {
+    opacity: 1;      /* Fully opaque when active */
+    visibility: visible; /* Fully visible and interactive when active */
+}
+    .item-bluebox {
+        background: var(--bg-blue);
+        display: flex
+;
+        padding: 40px;
+        flex-direction: column;
+        gap: 20px;
+        width: 85%;
+        position: relative;
+        border-radius: 10px;
+    }
+        .newsover-card {
+        background: #eff1f5;
+        font-family: var(--font-primary);
+        position: relative;
+        border-radius: 8px;
+        height: 18rem;
+    }
+
+
+}
+@media(max-width:680px)
+{
+       .banner_section1 h1 {
+        font-size: 40px;
+        line-height: 58px;
+        letter-spacing: -1px;
+        font-weight: 10;
+        color: #fff;
+        width: 80%;
+        font-family: 'Mirante', sans-serif;
+    }
+        .banner_para {
+        font-size: 15px;
+        position: relative;
+        z-index: 4;
+        padding-bottom: 29px;
+        font-family: 'TheSans Light Trial', sans-serif;
+        color: #fff;
+        line-height: 1.7rem;
+        font-weight: 100;
+        width: 100%;
+    }
+            .newscard-text p {
+        font-size: 24px;
+        color: #313131;
+        font-family: var(--font-secondary);
+        font-weight: 500;
+        line-height: 37.4px;
+    }
+        .leftimage img {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 60%;
+        height: 40%;
+    }
+        .rightimage img {
+        position: absolute;
+        bottom: 0;
+        right: 6px;
+        width: 36%;
+        height: 53%;
+        border-bottom-right-radius: 8px;
+    
+        }
+        .transform_back {
+    background-image: url(/assets/images/transform-smiles.webp);
+    border-radius: 10px;
+    height: 485px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
+}
+    .banner_section1 h1 {
+        font-size: 45px;
+        line-height: 58px;
+        letter-spacing: -1px;
+        font-weight: 10;
+        color: #fff;
+        width: 80%;
+        font-family: 'Mirante', sans-serif;
+    }
+}
+@media(max-width:600px)
+{
+
+    .news-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+    .newsover-left {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+        .newsover-card {
+        background: #eff1f5;
+        font-family: var(--font-primary);
+        position: relative;
+        border-radius: 8px;
+        height: 15rem;
+    }
+        .leftimage img {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 60%;
+        height: 62%;
+    }
+        .newsover-right {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        /* gap: 10px; */
+    }
+        .newsover-left {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        gap: 10px;
+    }
+        .newsover-right {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        /* gap: 10px; */
+    }
+        .newsover-left .news-over_bottom_image__TqE_G {
+        height: auto;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+        .book-onlinebackground {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 49%;
+        height: 8%;
+        background-image: url(/assets/images/bookonline.png);
+        background-repeat: no-repeat;
+    }
+}
+/* @media(max-width:430px)
+{
+      .banner_section1 h1 {
+        font-size: 30px;
+        line-height: 54px;
+        letter-spacing: -1px;
+        font-weight: 10;
+        color: #fff;
+        width: 80%;
+        font-family: 'Mirante', sans-serif;
+    }
+        .banner_para {
+        font-size: 13px;
+        position: relative;
+        z-index: 4;
+        padding-bottom: 29px;
+        font-family: 'TheSans Light Trial', sans-serif;
+        color: #fff;
+        line-height: 1.2rem;
+        font-weight: 100;
+        width: 78%;
+    }
+        .head-paty {
+        font-size: 25px;
+        font-weight: 510;
+        text-align: center;
+        letter-spacing: -1px;
+        color: #313131;
+        font-family: "Montserrat", sans-serif;
+    }
+        .rootcanal-text p {
+        width: 100%;
+        text-align: center;
+        line-height: 27.2px;
+        color: #313131;
+        font-weight: 300;
+        font-family: var(--font-primary);
+        font-size: .8rem;
+        color: rgb(49, 49, 49);
+    }
+        .item-bluebox {
+        background: var(--bg-blue);
+        display: flex;
+        padding: 28px;
+        flex-direction: column;
+        gap: 20px;
+        width: 85%;
+        position: relative;
+        border-radius: 10px;
+    }
+
+    .item-bluebox h2 {
+
+    color: rgb(255, 255, 255);
+    font-size: 23px;
+    font-weight: 500;
+    line-height: 41px;
+    }
+        .sub-heading {
+        color: #f2f2f2;
+        font-weight: 300;
+        font-family: var(--font-primary);
+        font-size: .8rem;
+        line-height: 24px;
+        width: 80%;
+    }
+        .rootcanal-text p {
+        width: 100%;
+        text-align: center;
+        line-height: 22.2px;
+        color: #313131;
+        font-weight: 300;
+        font-family: var(--font-primary);
+        font-size: .8rem;
+        color: rgb(49, 49, 49);
+    }
+    .simplebutton {
+    padding: 5px 20px 5px 36px;
+    }
+        .offers-text1 h2 {
+        line-height: 2.2rem;
+    }
+        .offers-text1 p {
+        line-height: 22.2px;
+        text-align: center;
+        color: #616161;
+        font-size: .8rem;
+        font-weight: 400;
+        font-family: 'TheSans Light Trial', sans-serif;
+    }
+    .newsover-text {
+    padding: 33px 29px;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+    .transform_back {
+        background-image: url(/assets/images/transform-smiles.webp);
+        border-radius: 10px;
+        height: 348px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-size: cover;
+        background-position: 50%;
+        background-repeat: no-repeat;
+    }
+        .head-paty {
+        font-size: 22px;
+        font-weight: 510;
+        text-align: center;
+        letter-spacing: -1px;
+        color: #313131;
+        font-family: "Montserrat", sans-serif;
+    }
+        .book-onlineheader {
+        font-size: 36px;
+        font-family: 'Mirante', sans-serif;
+       
+        font-weight: 510;
+        color: grey;
+        letter-spacing: -1px;
+        text-align: center;
+    }
+        .book-online_input__wrD3z {
+        width: 110%;
+        padding: 12px;
+        margin-bottom: 10px;
+        border: 1px solid grey;
+        border-radius: 9999px;
+        background-color: transparent;
+        font-size: .8rem;
+        transition: .3s;
+        max-height: 17px;
+        overflow: hidden;
+        resize: none;
+        font-family: 'TheSans Light Trial', sans-serif;
+        color: #f9f9f9;
+    }
+        .book-online-select {
+        width: 120%;
+        padding: 12px;
+        margin-bottom: 10px;
+        border: 1px solid grey;
+        border-radius: 9999px;
+        background-color: transparent;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        transition: .3s;
+        font-family: 'TheSans Light Trial', sans-serif;
+        font-size: 16px;
+        color: grey;
+    }
+        .book-onlinebackground {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 50%;
+        height: 8.3%;
+        background-image: url(/assets/images/bookonline.png);
+        background-repeat: no-repeat;
+    }
+        .footer-container {
+        display: flex;
+        flex-direction: column;
+        padding: 28px;
+        gap: 1.5rem;
+        justify-content: center;
+        align-items: center;
+    }
+    .footer-pairs {
+    display: flex;
+    gap: 10px;
+    font-size: .8rem;
+    align-items: center;
+}
+    .footer-right-text {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        font-size: .8rem;
+    }
+        .rootcanal-text p {
+        width: 100%;
+        text-align: center;
+        line-height: 22.2px;
+        color: #313131;
+        font-weight: 300;
+        font-family: var(--font-primary);
+        font-size: .8rem;
+        color: rgb(49, 49, 49);
+    }
+        .item-bluebox h2 {
+        color: rgb(255, 255, 255);
+        font-size: 21px;
+        font-weight: 500;
+        line-height: 39px;
+    }
+    .implebutton_withImage__eNqT_3 {
+    padding-right: 20px;
+    padding-top: 10px;
+    font-size: .7rem;
+    padding-bottom: 10px;
+    padding-left: 2rem;
+    border-radius: 40px;
+        gap: 11px;
+}
+    .checkboxcontainer {
+        display: flex
+;
+        align-items: center;
+        color: grey;
+        font-size: .8rem;
+        font-family: 'TheSans Light Trial', sans-serif;
+    }
+        .book-online_submitButton {
+        transition: .3s;
+        cursor: pointer;
+        text-align: center;
+        margin-bottom: 15px;
+        border: none;
+        width: 96%;
+        padding: 13px 24px;
+        background-color: #dad0c8;
+        font-family: var(--font-primary);
+        color: #313131;
+        font-size: .73rem;
+    }
+        .banner_section1 h1 {
+        font-size: 30px;
+        line-height: 49px;
+        letter-spacing: -1px;
+        font-weight: 10;
+        color: #fff;
+        width: 80%;
+        font-family: 'Mirante', sans-serif;
+    }
+    
+
+.navbar-show {
+    position: fixed;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+    right: -100%;
+    width: 69%;
+    height: 100%;
+    background-color: #dbd1c8;
+    padding: 20px;
+    display: flex
+;
+    flex-direction: column;
+    gap: 33px;
+    z-index: 2000;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, .1);
+    transition: right .3s ease;
+}
+.simplebutton_withImage__eNqT_3 {
+    padding-right: 11px;
+    padding-top: 6px;
+    font-size: .6rem;
+    padding-bottom: 6px;
+    border-radius: 40px;
+    gap:8px;
+}
+.footer-left-section {
+    display: flex
+;
+    flex-direction: column;
+    gap: 8px;
+}
+    .footer-right-text {
+        text-align: center;
+        display: flex
+;
+        flex-direction: column;
+        gap: 7px;
+        font-size: .8rem;
+    }
+
+.head-part {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #fff;
+    margin: 15px 0 0;
+    padding: 5px 0;
+    font-family: "Libre Franklin", sans-serif;
+    font-family: "Libre";
+}
+.section {
+    margin: .8rem 0 3rem;
+}
+    .active {
+        opacity: 1;
+        visibility: visible;
+    }
+} */
+@media(max-width:430px)
+{
+      .banner_section1 h1 {
+        font-size: 42px;
+        line-height: 60px;
+        letter-spacing: -1px;
+        font-weight: 10;
+        color: #fff;
+        width: 80%;
+        font-family: 'Mirante', sans-serif;
+    }
+        .banner_section1 {
+        width: 100%;
+        z-index: 2;
+        display: flex;
+        /* flex-direction: column; */
+        justify-content: center;
+        gap: 20px;
+        padding: 50px 5px 50px 27px;
+    }
+        .banner_header {
+        display: flex
+;
+        background-size: cover;
+        justify-content: space-between;
+        position: relative;
+        border-radius: 10px;
+        overflow: hidden;
+        height: 410px;
+    }
+        .item-bluebox {
+        background: var(--bg-blue);
+        display: flex
+;
+        padding: 40px;
+        flex-direction: column;
+        gap: 20px;
+        width: 79%;
+        position: relative;
+        border-radius: 10px;
+        }
+            .item-bluebox h2 {
+        color: rgb(255, 255, 255);
+        font-size: 22px;
+        font-weight: 500;
+        line-height: 37px;
+    }
+        .sub-heading {
+        color: #f2f2f2;
+        font-weight: 300;
+        font-family: var(--font-primary);
+        font-size: .8rem;
+        line-height: 27px;
+        width: 100%;
+    }
+     .newstext-section {
+    font-size: 16px;
+    line-height: 27.2px;
+    font-weight: 300;
+    color: #313131;
+    width: 100%;
+}
+.newsover-text {
+    padding: 29px 24px;
+    display: flex
+;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+    .transform_back {
+        background-image: url(/assets/images/transform-smiles.webp);
+        border-radius: 10px;
+        height: 342px;
+        width: 100%;
+        display: flex
+;
+        justify-content: center;
+        align-items: center;
+        background-size: cover;
+        background-position: 50%;
+        background-repeat: no-repeat;
+    }
+        .book-onlineheader {
+        font-size: 32px;
+        font-family: 'Mirante', sans-serif;
+        /* font-family: "Montserrat", sans-serif; */
+        font-weight: 510;
+        color: grey;
+        letter-spacing: -1px;
+        text-align: center;
+    }
+        .book-online_input__wrD3z {
+        width: 111%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid grey;
+        border-radius: 9999px;
+        background-color: transparent;
+        font-size: .8rem;
+        transition: .3s;
+        max-height: 17px;
+        overflow: hidden;
+        resize: none;
+        font-family: 'TheSans Light Trial', sans-serif;
+        color: #f9f9f9;
+    }
+        .book-online-select {
+        width: 121%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid grey;
+        border-radius: 9999px;
+        background-color: transparent;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        transition: .3s;
+        font-family: 'TheSans Light Trial', sans-serif;
+        font-size: .8rem;
+        color: grey;
+    }
+        .checkboxcontainer {
+        display: flex
+;
+        align-items: center;
+        color: grey;
+        font-size: .8rem;
+        font-family: 'TheSans Light Trial', sans-serif;
+    }
+        .book-online_submitButton {
+        transition: .3s;
+        cursor: pointer;
+        text-align: center;
+        margin-bottom: 15px;
+        border: none;
+        width: 96%;
+        padding: 11px 24px;
+        background-color: #dad0c8;
+        font-family: var(--font-primary);
+        color: #313131;
+        font-size: .7rem;
+    }
+}
+@media(max-width:414px)
+{
+        .active {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+@media(max-width:412px)
+{
+        .active {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+@media(max-width:390px)
+{
+        .offers-text1 p {
+        line-height: 16.2px;
+        text-align: center;
+        color: #616161;
+        font-size: .7rem;
+        font-weight: 400;
+        font-family: 'TheSans Light Trial', sans-serif;
+    }
+        .offers-text1 h2 {
+        line-height: 2rem;
+    }
+        .head-paty {
+        font-size: 20px;
+        font-weight: 510;
+        text-align: center;
+        letter-spacing: -1px;
+        color: #313131;
+        font-family: "Montserrat", sans-serif;
+    }
+        .offers-header {
+        color: #313131;
+        gap: 20px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        justify-content: space-between;
+        align-items: center;
+    }
+        .news-header {
+        display: flex
+;
+        align-items: center;
+        margin-bottom: 40px;
+        justify-content: space-between;
+        flex-direction: column;
+        gap: .9rem;
+    }
+        .news-header {
+        display: flex
+;
+        align-items: center;
+        margin-bottom: 20px;
+        justify-content: space-between;
+        flex-direction: column;
+        gap: .9rem;
+    }
+        .book-onlineheader {
+        font-size: 28px;
+        font-family: 'Mirante', sans-serif;
+        /* font-family: "Montserrat", sans-serif; */
+        font-weight: 510;
+        color: grey;
+        letter-spacing: -1px;
+        text-align: center;
+    }
+        .book-online_input__wrD3z {
+        width: 110%;
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid grey;
+        border-radius: 9999px;
+        background-color: transparent;
+        font-size: .8rem;
+        transition: .3s;
+        max-height: 17px;
+        overflow: hidden;
+        resize: none;
+        font-family: 'TheSans Light Trial', sans-serif;
+        color: #f9f9f9;
+    }
+        .book-online-select {
+        width: 120%;
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid grey;
+        border-radius: 9999px;
+        background-color: transparent;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        transition: .3s;
+        font-family: 'TheSans Light Trial', sans-serif;
+        font-size: .8rem;
+        color: grey;
+    }
+        .book-online_submitButton {
+        transition: .3s;
+        cursor: pointer;
+        text-align: center;
+        margin-bottom: 15px;
+        border: none;
+        width: 96%;
+        padding: 13px 24px;
+        background-color: #dad0c8;
+        font-family: var(--font-primary);
+        color: #313131;
+        font-size: .7rem;
+    }
+        .head-paty {
+        font-size: 25px;
+        font-weight: 510;
+        text-align: center;
+        letter-spacing: 0px;
+        color: #313131;
+        font-family: "Montserrat", sans-serif;
+    }
+        .active {
+        opacity: 1;
+        visibility: visible;
+    }
+        .banner_section1 h1 {
+        font-size: 42px;
+        line-height: 49px;
+        letter-spacing: -1px;
+        font-weight: 10;
+        color: #fff;
+        width: 80%;
+        font-family: 'Mirante', sans-serif;
+    }
+}
+@media(max-width:375px)
+{
+        .banner_section1 h1 {
+        font-size: 36px;
+        line-height: 49px;
+        letter-spacing: -1px;
+        font-weight: 10;
+        color: #fff;
+        width: 74%;
+        font-family: 'Mirante', sans-serif;
+    }
+        .banner_section3 .banner_decoration {
+        max-width: 216px;
+        max-height: 343px;
+    }
+        .banner_section3 .banner_decoration {
+        max-width: 193px;
+        max-height: 343px;
+    }
+    .banner_section3 {
+    position: absolute;
+    right: 0;
+    top: 4rem;
+}
+    .head-paty {
+        font-size: 25px;
+        line-height: 2.6rem;
+        font-weight: 510;
+        text-align: center;
+        letter-spacing: 0px;
+        color: #313131;
+        font-family: "Montserrat", sans-serif;
+    }
+    .banner_header {
+        display: flex;
+        background-size: cover;
+        justify-content: space-between;
+        position: relative;
+        border-radius: 10px;
+        overflow: hidden;
+        height: 391px;
+    }
+        .offers-text1 h2 {
+        line-height: 2rem;
+        font-size: 28px;
+    }
+
+  .testimonial-carddescription {
+    margin-top: 1.25rem;
+    font-size: 15px;
+    line-height: 26px;
+    font-weight: 400;
+   } 
+       .active {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+@media(max-width:360px)
+{
+         .active {
+        opacity: 1;
+        visibility: visible;
+    }
+        .banner_header {
+        display: flex
+;
+        background-size: cover;
+        justify-content: space-between;
+        position: relative;
+        border-radius: 10px;
+        overflow: hidden;
+        height: 423px;
+    }
+        .item-bluebox h2 {
+        color: rgb(255, 255, 255);
+        font-size: 19px;
+        font-weight: 500;
+        line-height: 37px;
+    }
+        .transform_back {
+
+        height: 278px;
+        }
+
+}
+@media(max-width:344px)
+{
+    .banner_section1 {
+        width: 100%;
+        z-index: 2;
+        display: flex;
+        /* flex-direction: column; */
+        justify-content: center;
+        gap: 20px;
+        padding: 40px 5px 40px 27px;
+    }
+
+}
