@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pro-dental</title>
+    <!-- for preload -->
+
+    <link rel="preload" href="assets/fonts/Mirante-Medium.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/Mirante-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/Mirante-Black.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/Mirante-ExtraBold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/Mirante-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+
+    <!-- for--> 
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+     <!-- end preload -->
+      <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+      <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+      <link rel="stylesheet" href="assets/css/style.css">
+      <!-- open sans -->
+       <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <!-- for google-font -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- ,,,,,,,,,, -->
+     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"> -->
+     <!-- ,,,,,,,,,, -->
+    <!-- for font-family -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin&display=swap" rel="stylesheet">
+    <!-- for owl-carousel -->
+
+</head>
+<body>
+    <!-- 1 -->
+    <header class="head-part"> 
+     <div class="wrapper">
+        <nav class="navbar">
+            <div class="nav-logo">
+                <a href="/">
+                    <img alt="logo" loading="lazy" width="120" height="40" decoding="async" data-nimg="1" class="navbar_logo__TD6Ti" style="color:transparent" src="assets/images/logo.jpg">
+                </a>
+            </div>
+            <div class="nav-links">
+                <!-- about us -->
+                <a data-text="About Us" href="/about-us.html" class="for-aboutus">About Us</a>
+                <!-- treatments -->
+                <div class="treatment-dropdown">                 
+                    <button class="treatment" data-text="Treatments">Treatments</button>
+                    <div class="navbar_dropdownmenu">
+                        <a href="/treatment.html" class="one">Root Canal Treatments</a>
+                        <a href="/treatment/hollywood-smiles" class="one">Hollywood Smiles</a>
+                        <a href="/treatment/general-dentistry" class="one">General Dentistry</a>
+                        <a href="/treatment/invisalign" class="one">Invisalign<sup>®</sup></a>
+                        <a href="/treatment/teeth-whitening" class="one">Teeth Whitening</a>
+                        <a href="/treatment/restorative-dentistry" class="one">Restorative Dentistry</a>
+                    </div>
+                </div>
+                <!-- patient testimonials -->
+                <a data-text="Patient Testimonials" class="testimonials" href="/p-testimonial.html">Patient Testimonials</a>               
+            </div>
+            <div class="nav-endlinks">
+                <a href="/getin-touch.html">
+                    GET IN TOUCH
+                    <svg stroke="currentColor" 
+                    fill="currentColor" stroke-width="0" viewBox="0 0 24 24" aria-hidden="true" 
+                    class="getintouch-svg" height="1em" width="1em"
+                     xmlns="http://www.w3.org/2000/svg">
+                     <path fill-rule="evenodd"
+                      d="M12 20.25a.75.75 0 0 1-.75-.75V6.31l-5.47 5.47a.75.75 0 0 1-1.06-1.06l6.75-6.75a.75.75 0 0 1 1.06 0l6.75 6.75a.75.75 0 1 1-1.06 1.06l-5.47-5.47V19.5a.75.75 0 0 1-.75.75Z" clip-rule="evenodd">
+                    </path>
+                   </svg>
+                </a>
+            </div>
+            <div class="menu-button">
+                <button class="navbar_menuToggleButton" aria-expanded="false">☰</button>
+            </div>
+        </nav>
+     </div>
+     <!-- navbar show -->
+      <div class="navbar-show">
+        <button class="navbar_closeButton">✕</button>
+        <a href="/">HOME</a>
+        <a href="/about-us.html">ABOUT US</a>
+        <div>
+            <button class="navbar_dropdownToggle" aria-expanded="false">TREATMENTS</button>
+        </div>
+        <a href="/p-testimonial.html">PATIENT TESTIMONIALS</a>
+        <a class="navbar_mobileOnly__MBEWL" href="/getin-touch.html">GET IN TOUCH<svg stroke="currentColor"
+             fill="currentColor" stroke-width="0" viewBox="0 0 24 24" aria-hidden="true" 
+             class="navbar_get_in_touch_btn___zGGK" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+             <path fill-rule="evenodd" d="M12 20.25a.75.75 0 0 1-.75-.75V6.31l-5.47 5.47a.75.75 0 0 1-1.06-1.06l6.75-6.75a.75.75 0 0 1 1.06 0l6.75 6.75a.75.75 0 1 1-1.06 1.06l-5.47-5.47V19.5a.75.75 0 0 1-.75.75Z" 
+            clip-rule="evenodd"></path></svg>
+        </a>
+        <div class="navbar-mobile-logo">
+            <img alt="logo" loading="lazy" width="250" height="200" decoding="async" data-nimg="1"
+             class="navbar_navlogo__S3Z58" style="color:transparent" 
+             src="assets/images/logo.webp">
+        </div>
+      </div>
+    </header> 
+
+
+<!-- 2 -->
+<section class="section">
+    <div class="container-wrapper">
+         <div class="about-banner" style="background-image: url(assets/images/about-heade.webp); background-size: cover;">
+           <!-- 1 -->
+            <div class="about-banner-text">
+              <!-- 1 -->
+               <h1 class="header-about" style="color: rgb(255, 255, 255);">Redefining Dentistry<br> in Amman</h1>
+               <!-- 2 -->
+               <div>
+                 <p class="banner_para">
+                     Led by UK-trained specialist Dr. Fadi,
+                     Prodental Clinic blends world-class expertise, advanced technology,
+                     and personalised care in a truly elevated dental experience.
+                </p>
+                <div>
+                    <a class="simplebutton_header_Link__aC2lr simplebutton_withImage__eNqT_" href="/getin-touch.html" 
+                    style="background: rgb(181, 168, 159); color: white;">BOOK A CONSULTATION
+                    <svg stroke="currentColor" 
+                    fill="currentColor" stroke-width="0" viewBox="0 0 24 24" aria-hidden="true" class="simplebutton_icon__LRptY"
+                     height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" 
+                     d="M12 20.25a.75.75 0 0 1-.75-.75V6.31l-5.47 5.47a.75.75 0 0 1-1.06-1.06l6.75-6.75a.75.75 0 0 1
+                         1.06 0l6.75 6.75a.75.75 0 1 1-1.06 1.06l-5.47-5.47V19.5a.75.75 0 0 1-.75.75Z" clip-rule="evenodd"></path>
+                    </svg>
+                    </a>
+                </div>
+               </div>
+            </div> 
+            <!-- 2 -->
+            <div class="about-banner-image">
+                <img alt="Image decoration" loading="lazy" width="350" height="500" decoding="async" data-nimg="1"
+                 class="banner_image__IvLdo"
+                 src="assets/images/header-1.webp" style="color: transparent;">
+            </div>
+         </div>
+    </div>
+</section>
+
+
+<!-- 3 -->
+<section class="section">
+    <div class="container-wrapper">
+        <!-- 1 -->
+         <div>
+            <h2 class="head-paty2" style="text-align: center; line-height: 50px;">Our Mission and Philosophy</h2>
+         </div>
+         <!-- 2 -->
+         <div class="who-we-are">
+            <!-- 1 -->
+             <img alt="image about us" loading="lazy" width="750" height="500" decoding="async" data-nimg="1"
+              class="about-us-who-we-are_image__iYdJ_"
+              src="assets/images/who-we-are.webp" style="color: transparent;">
+              <!-- 2 -->
+              <div class="who-we-are-item">
+                <!-- 1 -->
+                <div class="who-we-item-text">
+                    <div>
+                        <h2 class="about-us-who-we-are_card_text__nm0Qq">At Prodental Clinic, we believe dentistry is more than treatment
+                             — it’s a partnership built on trust, respect, and precision. Led by UK-trained specialist Dr. Fadi, 
+                             our approach combines global expertise with a deep commitment to personalised care. Every detail, from
+                              our state-of-the-art technology to the calming design of our clinic, is thoughtfully curated to ensure a seamless, 
+                            reassuring experience for every patient. Because to us, your smile deserves nothing less than excellence.
+                        </h2>
+                    </div>
+                </div>
+
+              </div>
+         </div>
+    </div>
+</section>
+<!-- 4 -->
+ <section class="section"  style="background-color: #EFF1F5;">
+    <div class="container-wrapper">
+        <div class="about-journey">
+            <!-- 1 -->
+            <div class="about-journey-text">
+                <!-- 1 -->
+               <h2 class="head-paty2">Our Journey to Excellence in Dentistry</h2>
+               <!-- 2 -->
+               <p>From the start, Prodental Clinic set out to raise the standard of dental care in Jordan through specialist expertise, advanced technology, and a deep commitment to patient wellbeing. Led by UK-trained endodontist Dr. Fadi, we’ve grown into a trusted centre of excellence, known for precision, integrity, and exceptional results.<br><br>Our journey has been shaped by a drive to do things differently — investing in world-class equipment, assembling a skilled and compassionate team, and creating a calming, luxurious environment that redefines the 
+                dental experience. Today, we continue to lead with purpose, delivering care that puts patients first in every way.
+               </p>
+               <!-- 3 -->
+                <div>
+                    <a class="simplebutton_header_Link__aC2lr simplebutton_withImage__eNqT_" href="/get-in-touch" 
+                    style="background: rgb(0, 40, 86); color: white;">GET IN TOUCH
+                    <svg stroke="currentColor" 
+                    fill="currentColor" stroke-width="0" viewBox="0 0 24 24" aria-hidden="true" 
+                    class="simplebutton_icon__LRptY" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M12 20.25a.75.75 0 0 1-.75-.75V6.31l-5.47 5.47a.75.75 0 0 1-1.06-1.06l6.75-6.75a.75.75 0 0
+                     1 1.06 0l6.75 6.75a.75.75 0 1 1-1.06 1.06l-5.47-5.47V19.5a.75.75 0 0 1-.75.75Z" clip-rule="evenodd">
+                    </path>
+                    </svg>
+                    </a>
+                </div>
+                <!--  -->
+            </div>
+            <!-- 2 -->
+            <div class="about-journey-photo">
+                <img alt="image two" loading="lazy" width="650" height="500" decoding="async" data-nimg="1" 
+                class="about-us-our-journey_doctor__teiYo" 
+                src="assets/images/our-journey.webp" style="color: transparent;">
+            </div>
+        </div>
+    </div>
+ </section>
+ <!-- 5 -->
+   <section class="section">
+     <div class="container-wrapper">
+        <!-- 1 -->
+         <div class="smile-toshow">
+               <!-- 1 -->
+                <h2 class="head-paty2" style="text-align: center;">Smiles to Show Off</h2>
+                <!-- 2 -->
+                 <p class="smile-to-show_para__1HACG">
+                    Each smile tells a story of renewed confidence and enhanced appearance, highlighting the 
+                    exceptional results we strive to deliver. Let these smiles inspire your journey to a brighter,
+                     more confident you.
+                 </p>
+         </div>
+         <!-- 2 -->
+      <section class="section">
+    <div class="container-wrapper">
+        <div class="allover-parts" >
+            <button class="prev">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-arrow-left"><path d="m12 19-7-7 7-7"></path><path d="M19 12H5"></path>
+                </svg>
+            </button>
+        <!-- ,,,,,,,,,,,,,,,,,,,, -->        
+            <!-- for ordering -->
+              
+          <div class="teeth-carousel  owl-carousel owl-theme" id="teeth--container">
+            <!-- 1 -->
+                 <div class="teeth-item">
+                    <img alt="image" loading="lazy"  decoding="async" data-nimg="1" 
+                    class="smile-to-show_image__admki" width="100%" height="100%"
+                     src="assets/images/slider2.webp" style="color: transparent;">
+                 </div>
+                 <div class="teeth-item">
+                    <img alt="image" loading="lazy"decoding="async" data-nimg="1" 
+                    class="smile-to-show_image__admki" width="100%" height="100%"
+                     src="assets/images/slider1.webp" style="color: transparent; border-radius: 20px;">
+                 </div>
+                 <!-- 2 -->
+                <div class="teeth-item">
+                    <img alt="image" loading="lazy"  decoding="async" data-nimg="1" 
+                    class="smile-to-show_image__admki" width="100%" height="100%"
+                     src="assets/images/slider2.webp" style="color: transparent;">
+                 </div>
+                 <div class="teeth-item">
+                    <img alt="image" loading="lazy"decoding="async" data-nimg="1" 
+                    class="smile-to-show_image__admki" width="100%" height="100%"
+                     src="assets/images/slider1.webp" style="color: transparent; border-radius: 20px;">
+                 </div>
+                 <!-- 3 -->
+                <div class="teeth-item">
+                    <img alt="image" loading="lazy"  decoding="async" data-nimg="1" 
+                    class="smile-to-show_image__admki" width="100%" height="100%"
+                     src="assets/images/slider2.webp" style="color: transparent;">
+                 </div>
+                 <div class="teeth-item">
+                    <img alt="image" loading="lazy"decoding="async" data-nimg="1" 
+                    class="smile-to-show_image__admki"  width="100%" height="100%"
+                     src="assets/images/slider1.webp" style="color: transparent; border-radius: 20px;">
+                 </div>
+          </div>
+          
+    
+
+            <button class="next">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-arrow-right"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+</section>
+
+        </div>
+   </section>
+
+  <!-- 5 end -->
+
+
+   <!-- 6 -->
+    <!-- 7 -->
+     <!-- 8 -->
+      <!-- 9 -->
+
+
+
+     <!-- 7 -->
+    <div class="section">
+        <div class="container-wrapper">
+          <!-- 1 -->
+              <div class="testimonial-header">
+                <div>
+                     <h2 class="head-paty">Why Patients Trust us - in Thier Words</h2>
+                </div>
+                <div class="testimonial-button">
+                   <!-- 1 -->
+                    <button class="testimonials_sliderButton__Junc_ " id="owl-prev" style="cursor: pointer;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+                        stroke-linejoin="round" class="lucide lucide-arrow-left
+                         testimonials_btn_arrow__kPbVo"><path d="m12 19-7-7 7-7"></path><path d="M19 12H5"></path></svg>
+                    </button>
+                    <!-- 2 -->
+                     <button class="testimonials_sliderButton__Junc_ " id="owl-next" style="cursor: pointer;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" 
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+                        stroke-linejoin="round" class="lucide lucide-arrow-right 
+                        testimonials_btn_arrow__kPbVo"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                    </button>
+                </div>
+              </div>
+           <!-- 2 --> 
+               <div class="slider-in">
+                        <div class="slick-container  owl-carousel owl-theme" id="testimonialsCarousel" >
+                            <!--   -->
+                            <!-- 1 -->
+                            <div class="slick-slide">
+                                    <!-- 1 -->
+                                    <img alt="card image" loading="lazy" width="100" height="100" decoding="async" data-nimg="1" 
+                                     class="testimonials_image__" style="color:transparent"
+                                     src="assets/images/testimonial.webp">
+                                    <!-- 2 -->
+                                    <div class="testimonial-cardcontent">
+                                            <!-- heading -->
+                                            <p class="testimonials_cardName__jYzDF">J Lodge</p>
+                                            <!-- stars -->
+                                             <div class="testimonial-star">
+                                               <img src="assets/images/stars.PNG" alt="">
+                                            
+                                             </div>
+                                             <!-- para -->
+                                            <p class="testimonial-carddescription">
+                                                 “I came to see Fadi for a root canal on one of my front teeth. 
+                                                 I was so worried when I went, but he put me at ease, explained 
+                                                 everything before he started.
+                                                  My tooth looks lovely, you can't even tell I've had it done. 
+                                                  He was the best dentist I've ever seen, amazing.”
+                                            </p>
+                                    </div>
+                            </div>
+                            <!-- 2 -->
+                            <div class="slick-slide">
+                                    <!-- 1 -->
+                                    <img alt="card image" loading="lazy" width="100" height="100" decoding="async" data-nimg="1" 
+                                    class="testimonials_image__" style="color:transparent"
+                                   src="assets/images/testimonial.webp">
+                                    <!-- 2 -->
+                                    <div class="testimonial-cardcontent">
+                                            <!-- heading -->
+                                            <p class="testimonials_cardName__jYzDF">Anonymous</p>
+                                            <!-- stars -->
+                                             <div class="testimonial-star">
+                                                     <img src="assets/images/stars.PNG" alt="">
+                                             </div>
+                                             <!-- para -->
+                                             <p class="testimonial-carddescription">
+                                                 “I came to see Fadi for a root canal on one of my front teeth. 
+                                                 I was so worried when I went, but he put me at ease, explained 
+                                                 everything before he started.
+                                                  My tooth looks lovely, you can't even tell I've had it done. 
+                                                  He was the best dentist I've ever seen, amazing.”
+                                            </p>
+                                    </div>
+                            </div>
+                            <!-- 3 -->
+                            <div class="slick-slide">
+                                    <!-- 1 -->
+                                    <img alt="card image" loading="lazy" width="100" height="100" decoding="async" data-nimg="1" 
+                                    class="testimonials_image__" style="color:transparent"
+                                   src="assets/images/testimonial.webp">
+                                    <!-- 2 -->
+                                    <div class="testimonial-cardcontent">
+                                            <!-- heading -->
+                                            <p class="testimonials_cardName__jYzDF">J Lodge</p>
+                                            <!-- stars -->
+                                             <div class="testimonial-star">
+                                                  <img src="assets/images/stars.PNG" alt="">
+                                             </div>
+                                             <!-- para -->
+                                              <p class="testimonial-carddescription">
+                                                 “I came to see Fadi for a root canal on one of my front teeth. 
+                                                 I was so worried when I went, but he put me at ease, explained 
+                                                 everything before he started.
+                                                  My tooth looks lovely, you can't even tell I've had it done. 
+                                                  He was the best dentist I've ever seen, amazing.”
+                                            </p>
+                                    </div>
+                            </div>
+                            <!-- 4 -->
+                            <div class="slick-slide">
+                                    <!-- 1 -->
+                                    <img alt="card image" loading="lazy" width="100" height="100" decoding="async" data-nimg="1" 
+                                    class="testimonials_image__" style="color:transparent"
+                                   src="assets/images/testimonial.webp">
+                                    <!-- 2 -->
+                                    <div class="testimonial-cardcontent">
+                                            <!-- heading -->
+                                            <p class="testimonials_cardName__jYzDF">Anonymous</p>
+                                            <!-- stars -->
+                                             <div class="testimonial-star">
+                                                     <img src="assets/images/stars.PNG" alt="">
+                                             </div>
+                                             <!-- para -->
+                                             <p class="testimonial-carddescription">
+                                                 “I came to see Fadi for a root canal on one of my front teeth. 
+                                                 I was so worried when I went, but he put me at ease, explained 
+                                                 everything before he started.
+                                                  My tooth looks lovely, you can't even tell I've had it done. 
+                                                  He was the best dentist I've ever seen, amazing.”
+                                            </p>
+                                    </div>
+                            </div>
+                            <!-- 5 -->
+                            <div class="slick-slide">
+                                    <!-- 1 -->
+                                    <img alt="card image" loading="lazy" width="100" height="100" decoding="async" data-nimg="1" 
+                                    class="testimonials_image__" style="color:transparent"
+                                   src="assets/images/testimonial.webp">
+                                    <!-- 2 -->
+                                    <div class="testimonial-cardcontent">
+                                            <!-- heading -->
+                                            <p class="testimonials_cardName__jYzDF">J Lodge</p>
+                                            <!-- stars -->
+                                             <div class="testimonial-star">
+                                                  <img src="assets/images/stars.PNG" alt="">
+                                             </div>
+                                             <!-- para -->
+                                              <p class="testimonial-carddescription">
+                                                 “I came to see Fadi for a root canal on one of my front teeth. 
+                                                 I was so worried when I went, but he put me at ease, explained 
+                                                 everything before he started.
+                                                  My tooth looks lovely, you can't even tell I've had it done. 
+                                                  He was the best dentist I've ever seen, amazing.”
+                                             </p>
+                                    </div>
+                            </div>
+                            <!-- 6 -->
+                            <div class="slick-slide">
+                                    <!-- 1 -->
+                                    <img alt="card image" loading="lazy" width="100" height="100" decoding="async" data-nimg="1" 
+                                    class="testimonials_image__" style="color:transparent"
+                                   src="assets/images/testimonial.webp">
+                                    <!-- 2 -->
+                                    <div class="testimonial-cardcontent">
+                                            <!-- heading -->
+                                            <p class="testimonials_cardName__jYzDF">Anonymous</p>
+                                            <!-- stars -->
+                                             <div class="testimonial-star">
+                                                     <img src="assets/images/stars.PNG" alt="">
+                                             </div>
+                                             <!-- para -->
+                                            <p class="testimonial-carddescription">
+                                                 “I came to see Fadi for a root canal on one of my front teeth. 
+                                                 I was so worried when I went, but he put me at ease, explained 
+                                                 everything before he started.
+                                                  My tooth looks lovely, you can't even tell I've had it done. 
+                                                  He was the best dentist I've ever seen, amazing.”
+                                            </p>
+                                    </div>
+                            </div>
+                            <!--  -->
+                        </div>
+               </div>
+        </div>
+    </div>
+       <!-- 8 -->
+    <div class="section">
+    <div class="container-wrapper">  
+            <div class="book-onlineback"></div>
+            <div class="onlinebook-container">
+                <div class="bookonline-form">
+                    <h2 class="book-onlineheader">GET IN TOUCH</h2>
+                    <div class="book-onlinebackground"></div>
+                    <!-- form -->
+                     <!-- <form action="#" class="form">
+                        <div class="formcontainer">
+                           
+                            <div class="onlineinput">
+                                 <input type="text" placeholder="Name" class="book-online_input__wrD3z" name="name" value="">
+                            </div>
+                         
+                             <div class="onlineinput">
+                                 <input type="text" placeholder="Email address" class="book-online_input__wrD3z" name="email" value="">
+                            </div>
+                            
+                            <div class="onlineinput">
+                                 <input type="tel" placeholder="Phone Number" class="book-online_input__wrD3z" name="phone" value="">
+                            </div>
+                           
+                            <div class="onlineinput">
+                                 <select class="book-online-select" name="treatment" value="">
+                                    <option disabled="" value="" selected="">Select treatment</option>
+                                    <option value="Root Canal Treatments">Root Canal Treatments</option>
+                                    <option value="Hollywood Smiles">Hollywood Smiles</option>
+                                    <option value="General Dentistry">General Dentistry</option>
+                                    <option value="Invisalign">Invisalign<sup>®</sup></option>
+                                    <option value="Teeth Whitening">Teeth Whitening</option>
+                                    <option value="Restorative Dentistry">Restorative Dentistry</option>
+                                 </select>
+                            </div>
+                          
+                            <div class="onlineinput">
+                                <textarea name="message" placeholder="Message" class="book-online_input__wrD3z"></textarea>
+                            </div>
+                           
+                            <div class="onlineinput">
+                                <div class="checkboxcontainer">
+                                    <input type="checkbox" id="privacy" class="book-online_checkbox__7_VTq" name="privacy">
+                                    <label for="privacy">Please tick this box to agree to our 
+                                        <a class="book-online_link__USgNP" href="#">privacy policy</a>
+                                       before continuing.
+                                    </label>
+                                </div>
+                            </div>
+                            <button type="submit" class="book-online_submitButton">SEND YOUR MESSAGE</button>
+                        </div>
+                     </form> -->
+              <form action="#" class="form" id="bookingForm"> 
+                <div class="formcontainer">
+                <div class="onlineinput">
+                   <input type="text" placeholder="Name" class="book-online_input__wrD3z" name="name"
+                    id="nameInput" value="">
+                    <span class="error-message error1" id="nameError"></span> 
+                </div>
+                <div class="onlineinput">
+                  <input type="text" placeholder="Email address" class="book-online_input__wrD3z" name="email"
+                   id="emailInput" value="" > 
+                  <span class="error-message error2" id="emailError"></span> 
+                </div>
+                <div class="onlineinput">
+                <input type="tel" placeholder="Phone Number" class="book-online_input__wrD3z" name="phone" id="phoneInput" value=""> 
+                <span class="error-message error3" id="phoneError"></span> 
+               </div>
+                <div class="onlineinput">
+                <select class ="book-online-select" name="treatment" id="treatmentSelect" value=""> <option disabled="" value="" selected="">Select treatment</option>
+                <option value="Root Canal Treatments">Root Canal Treatments</option>
+                <option value="Hollywood Smiles">Hollywood Smiles</option>
+                <option value="General Dentistry">General Dentistry</option>
+                <option value="Invisalign">Invisalign<sup>®</sup></option>
+                <option value="Teeth Whitening">Teeth Whitening</option>
+                <option value="Restorative Dentistry">Restorative Dentistry</option>
+                </select>
+                <span class="error-message error4" id="treatmentError"></span> 
+               </div>
+                <!-- <div class="onlineinput">
+               <textarea id="messageTextarea" placeholder="Message"  class="book-online_input__wrD3z" name="message">               
+               </textarea> <span class="error-message" id="messageError"></span> 
+               </div>   -->
+               <div class="onlineinput">
+               <input id="messageTextarea" placeholder="Message"  class="book-online_input__wrD3z error5" name="message">               
+               </input> 
+               <span class="error-message error5" id="messageError"></span> 
+               </div>
+                <!-- <div class="onlineinput">
+                    <div class="checkboxcontainer">
+                        <input type="checkbox" id="privacy" class="book-online_checkbox__7_VTq" name="privacy"> 
+                        <label for="privacy"  class="custom-checkbox-label">Please tick this box to agree to our<a class="book-online_link__USgNP"
+                             href="#">privacy policy</a>
+                              before continuing.
+                         <span class="custom-checkbox"></span>
+                            </label>
+                         
+                    </div>
+               </div>  -->
+               <!-- ............ -->
+               <div class="onlineinput">
+                <div class="checkboxcontainer">
+                    <div class="partlyconvert">
+                      <input type="checkbox" id="privacy" class="book-online_checkbox__7_VTq" name="privacy">
+                      <label for="privacy" class="custom-checkbox-label">
+            Please tick this box to agree to our
+            <a class="book-online_link__USgNP" href="#">privacy policy</a>
+            before continuing.
+            <span class="custom-checkbox"></span>
+                      </label>
+                    </div>
+                    <span class="error-message error6" id="privacyError"></span>
+                </div>
+                </div>
+                <!-- ,,,,,,,,, -->              
+               <button type="submit" class="book-online_submitButton">SEND YOUR MESSAGE</button>                
+                <!--  -->
+                </div>
+              </form>
+<!-- end -->
+              
+                </div>
+            </div>
+    </div>
+    </div>     
+        <!-- 9 -->
+    <footer>
+    <div class="footer_footer">
+    <div class="footer-container">
+        <!-- left -->
+        <div class="footer-left-section">
+            <!-- 1 -->
+            <div class="footer-pairs">
+                <!-- img -->
+                <img alt="mail" loading="lazy" width="30" height="30" decoding="async" data-nimg="1" style="color:transparent"
+                 src="assets/images/email.svg">
+                 <!-- para -->
+                <p>
+                    <a href="mailto:info@prodentaljo.com">info@prodentaljo.com</a>
+                </p>
+            </div>
+            <!-- 2 -->
+             <div class="footer-pairs">
+                <!-- img -->
+                <img alt="phone" loading="lazy" width="30" height="30" decoding="async" data-nimg="1" style="color:transparent"
+                 src="assets/images/address.svg">
+                 <!-- para -->
+                <p>Al-badee St., Prince Rashid Suburb, Santa Clara Complex,<br> 2nd floor Office 205, Amman, Jordan<br></p>
+             </div>
+             <!-- 3 -->
+              <div class="footer-pairs">
+                <!-- img -->
+                <img alt="mail" loading="lazy" width="30" height="30" decoding="async" data-nimg="1" style="color:transparent"
+                 src="assets/images/phone.svg">
+                 <!-- para -->
+              <p>Contact Number: <a href="tel:+962791070107">+962791070107</a></p>
+              </div>
+            <!-- 4 -->
+             <div class="footer-pairs">
+                <!-- img -->
+                <img alt="phone" loading="lazy" width="30" height="30" decoding="async" data-nimg="1" style="color:transparent"
+                 src="assets/images/hours2.svg">
+                 <!-- para -->
+                <p>Working Hours : Mon - Fri 9:00am - 5:00pm</p>
+             </div>
+        </div>
+        <!-- right -->
+        <div class="footer-right-section">
+            <div class="footer-right-text">
+                 <p>© <!-- -->2025<!-- --> Prodental Clinic. All rights reserved</p>
+                 <p><a class="footer_link__g5__l" href="/privacy-policy">Privacy &amp; Cookie Policy</a> <!-- -->|
+                    <!-- --> <a class="footer_link__g5__l" href="/terms-of-use">Terms of Use</a> <!-- -->|<!-- --> 
+                      <a class="footer_link__g5__l" href="/complaints-policy">Complaints Policy</a>
+                </p>
+                <p>designed and maintained by<!-- --> 
+                    <a href="http://smile-mc.co.uk/" target="__blank">smile marketing &amp; consultancy</a>
+                </p>
+                <p>website last updated on <!-- -->14/06/2025</p>
+            </div>
+        </div>
+    </div>
+    </div>
+    </footer>
+<img alt="footer" loading="lazy" width="1900" height="261" decoding="async" data-nimg="1" class="footer" 
+style="color:transparent"
+ src="assets/images/prodental-footer.webp">
+<!-- end of html -->
+ <!-- adding js -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="assets/js/owl.carousel.min.js"></script>
+  <script src="assets/js/script.js"></script>
+  <!-- add -->
+   <!-- .....................for previous scroll -->
+ <script>
+    $(document).ready(function(){
+        var testimonialsOwl = $('#testimonialsCarousel');
+
+        testimonialsOwl.owlCarousel({
+            loop:true,
+            margin:10,
+            nav:false,
+            dots:false,
+            autoplay:true,
+            autoplayTimeout:2000,
+            autoplayHoverPause:true,
+            mouseDrag: false,
+            touchDrag: false,
+            responsive:{
+                0:{        // FOR WIDTHS: 0px up to 768px (inclusive)
+                    items:1
+                },
+                770:{      // FOR WIDTHS: 769px up to 1025px (inclusive)
+                    items:2
+                },
+                1026:{     // FOR WIDTHS: 1026px and above
+                    items:3
+                }
+            }
+        });
+
+        $('#owl-next').click(function() {
+            testimonialsOwl.trigger('next.owl.carousel');
+        });
+
+        $('#owl-prev').click(function() {
+            testimonialsOwl.trigger('prev.owl.carousel');
+        });
+    });
+</script>
+ <!-- ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, -->
+  <!-- ,,,,,,,,,,,,,,,,,,,, teeth -->
+<!-- <script>
+    $(document).ready(function(){
+       
+        $("#mySpecificCarousel").owlCarousel({
+            items: 2, 
+            loop: true, 
+            autoplay: true,
+            autoplayTimeout: 2000, 
+            // autoplaySpeed: 1000, 
+            slideBy: 1, 
+            nav: false, 
+            dots: false, 
+            mouseDrag: true,
+            pullDrag: true, 
+            freeDrag: false,
+            autoplayHoverPause:true,
+            responsive:{
+                0:{ 
+                    items:1
+                },
+                600:{ 
+                    items:2
+                }
+            }
+        });
+
+        var owl = $('#mySpecificCarousel');
+        $('.prev').click(function() {
+            owl.trigger('prev.owl.carousel'); 
+        });
+
+        $('.next').click(function() {
+            owl.trigger('next.owl.carousel');
+        });
+    });
+</script> -->
+<!-- [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]] -->
+ <script>
+  $(document).ready(function () {
+    var owl = $('#teeth--container');
+
+    owl.owlCarousel({
+      loop: true,
+      margin: 10,
+      nav: false, // we will use custom nav
+      dots: false,
+       autoplay:true,
+       autoplayTimeout:2000,
+       autoplayHoverPause:true,
+
+      responsive: {
+        0: {
+          items: 1
+        },
+        768: {
+          items: 2
+        }
+      }
+    });
+
+    // Custom Navigation
+    $('.next').click(function () {
+      owl.trigger('next.owl.carousel');
+    });
+
+    $('.prev').click(function () {
+      owl.trigger('prev.owl.carousel');
+    });
+  });
+</script>
+
+<!-- ]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]] -->
+
+<!-- ........................................ -->
+      <!-- javascript  newpart-->
+
+  <!-- To add the carousel -->
+  <script>
+$(document).ready(function(){
+    $("#root-container").owlCarousel({
+        loop: true,       
+        nav: false,  
+        mouseDrag: false,
+        touchDrag: false,         
+        dots: false,      
+        autoplay: true,      
+        autoplayTimeout: 2000, 
+        autoplayHoverPause: false,
+         animateOut: 'fadeOut', 
+        //  animateIn: 'fadeIn' , 
+        responsive:{        
+            0:{
+                items:1       
+            },
+            600:{
+                items:1   
+            },
+            1000:{
+                items:1 
+            }
+        }
+    });
+});
+  </script>
+
+<script>
+    $(document).ready(function(){
+        var testimonialsOwl = $('#testimonialsCarousel');
+
+        testimonialsOwl.owlCarousel({
+            loop:true,
+            margin:10,
+            nav:false,
+            dots:false,
+            autoplay:true,
+            autoplayTimeout:2000,
+            autoplayHoverPause:true,
+            mouseDrag: true,
+            touchDrag: false,
+            responsive:{
+                0:{        // FOR WIDTHS: 0px up to 768px (inclusive)
+                    items:1
+                },
+                770:{      // FOR WIDTHS: 769px up to 1025px (inclusive)
+                    items:2
+                },
+                1026:{     // FOR WIDTHS: 1026px and above
+                    items:3
+                }
+            }
+        });
+
+        $('#owl-next').click(function() {
+            testimonialsOwl.trigger('next.owl.carousel');
+        });
+
+        $('#owl-prev').click(function() {
+            testimonialsOwl.trigger('prev.owl.carousel');
+        });
+    });
+</script>
+<!-- 11111111 -->
+
+<!-- showMenu -->
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        let burgerMenu = document.querySelector(".navbar .menu-button button"); // Ensure this selector matches your HTML
+        let showMenu = document.querySelector(".navbar-show");
+        let crossMenu = document.querySelector(".navbar_closeButton"); // Corrected typo here
+
+        if (burgerMenu && showMenu) { // Always good to check if elements exist
+            burgerMenu.addEventListener("click", function() {
+                showMenu.classList.add("active"); // Adds the 'active' class
+            });
+        }
+
+        if (crossMenu && showMenu) { // Always good to check if elements exist
+            crossMenu.addEventListener("click", function() {
+                showMenu.classList.remove("active"); // Removes the 'active' class
+            });
+        }
+    });
+</script>
+<!-- vvvvvvvvv -->
+   <!-- .................... -->
+</body>
+</html>
