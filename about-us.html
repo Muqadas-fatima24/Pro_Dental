@@ -229,30 +229,66 @@
                 elevate every aspect of your dental experience.
             </p>
            </div>
+           <!-- 2-1 -->
+           <div class="circular-carousel">
+
+              <!-- prev -->
+      <button class="prev-part1" id="prevCircularBtn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-arrow-left"><path d="m12 19-7-7 7-7"></path><path d="M19 12H5"></path>
+                </svg>
+      </button>
  <!-- 2 -->
-  <div class="circular-container">
+  <div class="circular-container owl-carousel owl-theme" id="circularCarousel">
+ 
     <!-- 1 -->
-    <div class="circular1">
-     
+    <div class="circular1 circular-parts item">
+                   <img alt="image" loading="lazy"  decoding="async" data-nimg="1" 
+                           class="image_holder"  width="100%" height="100%"
+                     src="assets/images/pakk1.webp" style="color: transparent;">
     </div>
     <!-- 2 -->
-    <div class="circular2">
+    <div class="circular2 circular-parts item">
           <div class="teet-item">
                     <img alt="image" loading="lazy"  decoding="async" data-nimg="1" 
-                    class="smile-to-show_image__admki" width="100%" height="100%"
-                     src="assets/pak4" style="color: transparent;">
-                 </div>
+                     class="image_holder"  width="100%" height="100%" 
+                     src="assets/images/pakk2.webp" style="color: transparent;">
+          </div>
     </div>
     <!-- 3 -->
-    <div class="circular3"></div>
+    <div class="circular3 circular-parts item">
+          <img alt="image" loading="lazy"  decoding="async" data-nimg="1" 
+                   class="image_holder"  width="100%" height="100%"
+                     src="assets/images/pakk3.webp" style="color: transparent;">
+    </div>
     <!-- 4 -->
-    <div class="circular4"></div>
+    <div class="circular4 circular-parts item">
+          <img alt="image" loading="lazy"  decoding="async" data-nimg="1" 
+                    class="image_holder"  width="100%" height="100%"
+                     src="assets/images/pakk4.webp" style="color: transparent;">
+    </div>
     <!-- 5 -->
-    <div class="circular5"></div>
+    <div class="circular5 circular-parts item">
+          <img alt="image" loading="lazy"  decoding="async" data-nimg="1" 
+                      class="image_holder"  width="100%" height="100%"
+                     src="assets/images/pakk5.webp" style="color: transparent;">
+    </div>
     <!-- 6 -->
-    <div class="circular6"></div>
+    <div class="circular6 circular-parts item">
+          <img alt="image" loading="lazy"  decoding="async" data-nimg="1" 
+                    class="image_holder"  width="100%" height="100%"
+                     src="assets/images/pakk3.webp" style="color: transparent;">
+    </div>
     <!--  -->
   </div>
+    <button class="next-part1" id="nextCircularBtn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-arrow-right"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path>
+                </svg>
+    </button>
+        </div>
         </div>
     </section>
  <!-- ]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]] -->
@@ -850,6 +886,74 @@ $(document).ready(function(){
     });
 </script>
 <!-- vvvvvvvvv -->
+ <!-- ''''''''''''''''''''''''''''''''''''''''for last carousel -->
+<script>
+    $(document).ready(function(){
+
+
+        // Specific Initialization for #circularCarousel
+        var owlCircular = $("#circularCarousel");
+
+        if (owlCircular.length) { // Check if the element actually exists on the page
+            owlCircular.owlCarousel({
+                loop: true,         // Allows infinite looping of slides
+                margin: 10,         // Space between items (adjust as needed for your circular layout)
+                autoplay:true,     // Autoplay is enabled as per your code
+                nav: false,         // Keep false as you're using custom buttons
+                dots: false,        // Keep false if you don't want pagination dots
+                center: true,
+                // autoplayTimeout: 2000 ,    // <--- IMPORTANT: Enables the 'center' class for styling
+                autoplayTimeout:2000,
+                autoplayHoverPause:true,
+                mouseDrag: true,
+                touchDrag: false,
+                // Default items for very large screens (or if no responsive rule matches)
+                items: 3,           // Shows 3 items on large screens
+                slideBy: 1,         // <--- KEY: Always moves 1 item at a time
+
+                responsive:{        // Define how many items show on different screen sizes
+                    0:{             // For screens 0px wide and up (e.g., small phones like 314px)
+                        items:1,
+                        slideBy:1,
+                        margin: 0 // Often good to reduce margin for single items on small screens
+                    },
+                    768:{           // For screens 768px wide and up (e.g., tablets)
+                        items:2,
+                        slideBy:1 // <--- KEY: Moves 1 item at a time
+                    },
+                    1000:{          // For screens 1000px and wider (e.g., desktops)
+                        items:3,
+                        slideBy:1 // <--- KEY: Moves 1 item at a time
+                    }
+                }
+            });
+
+            // Connect your custom buttons to THIS specific #circularCarousel instance
+            $('#prevCircularBtn').click(function() {
+                owlCircular.trigger('prev.owl.carousel');
+            });
+            $('#nextCircularBtn').click(function() {
+                owlCircular.trigger('next.owl.carousel');
+            });
+
+            // --- JavaScript for dynamic styling of the centered item ---
+            // This event fires AFTER the carousel has finished its transition
+            owlCircular.on('translated.owl.carousel', function(event) {
+                // Remove active styles from ALL items first
+                $(this).find('.owl-item').removeClass('centered-active-style');
+
+                // Add active styles to the current centered item
+                // Owl Carousel adds 'active' to visible items and 'center' to the middle one (if center: true)
+                $(this).find('.owl-item.active.center').addClass('centered-active-style');
+            });
+
+            // Also apply styles on initial load (after a very short delay to ensure Owl Carousel renders)
+            setTimeout(function() {
+                owlCircular.find('.owl-item.active.center').addClass('centered-active-style');
+            }, 0); // Small delay, adjust if needed
+        }
+    });
+</script>
    <!-- .................... -->
 </body>
 </html>
