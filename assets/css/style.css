@@ -307,7 +307,7 @@ body{
     overflow: hidden; 
 }
 .item img{
-    width:44rem;
+    /* width:44rem; */
     /* width:100%; */
     height:30rem;
     object-fit: cover;
@@ -2254,7 +2254,24 @@ a {
   width: auto !important;
   flex: none !important;
 } 
-
+/* meeting */
+.meeting-part{
+    display:flex;
+    flex-direction: column;
+    margin:0 auto ;
+    text-align: center;
+    width:50%; 
+}
+.meeting-part p {
+    font-family: 'TheSans Light Trial', sans-serif;
+    font-size: 1.1rem;
+    line-height: 27.2px;
+    color: #616161;
+    width: 100%;
+    margin: auto;
+    padding-top: 1rem;
+    text-align: center;
+}
 
 
 /* font families */
